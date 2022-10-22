@@ -13,12 +13,13 @@ session_start();
     <div class="container mt-5">
 
         <?php include('message.php'); ?>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                     <h4>เพิ่มข้อมูลลูกค้า
-                        <a href="index1.php" class="btn btn-danger float-end">   ย้อนกลับ</a> 
+                        <a href="index1.php" class="btn btn-danger float-end">ย้อนกลับ</a> 
                          </h4>
                     </div>
                     <div class="card-body">
@@ -36,10 +37,6 @@ session_start();
                         <label>ชื่อผู้ใช้</label>
                         <input type="text" name="ctm_user" class="form-control">
                     </div>
-                    <!-- <div class="mb-3">
-                        <label>รหัสผ่าน</label>
-                        <input type="password" name="ctm_password" class="form-control">
-                    </div> -->
                     <div class="mb-3">
                         <label>อีเมล</label>
                         <input type="text" name="ctm_email" class="form-control">

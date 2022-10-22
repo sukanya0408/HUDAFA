@@ -10,7 +10,7 @@
     <title>ข้อมูลลูกค้า</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container mt-4">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -27,7 +27,6 @@
                                     <th>ชื่อ</th>
                                     <th>นามสกุล</th>
                                     <th>ชื่อผู้ใช้</th>
-                                    <!-- <th>รหัสผ่าน</th> -->
                                     <th>อีเมล</th>
                                     <th>เบอร์โทรศัพท์</th>
                                     <th>ที่อยู่</th>
@@ -46,7 +45,6 @@
                                             <td><?=$customer['ctm_name']; ?></td>
                                             <td><?=$customer['ctm_sname']; ?></td>
                                             <td><?=$customer['ctm_user']; ?></td>
-                                            <!-- <td><?=$customer['ctm_password']; ?></td> -->
                                             <td><?=$customer['ctm_email']; ?></td>
                                             <td><?=$customer['ctm_phone']; ?></td>
                                             <td><?=$customer['ctm_address']; ?></td>

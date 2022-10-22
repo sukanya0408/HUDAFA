@@ -50,12 +50,12 @@ if(isset($_POST['update_customer'])){
 
 if(isset($_POST['save_customer']))
 {
-    $ctm_name = mysqli_real_escape_string($con, $_POST['ctm_name']);
-    $ctm_sname = mysqli_real_escape_string($con, $_POST['ctm_sname']);
-    $ctm_user = mysqli_real_escape_string($con, $_POST['ctm_user']);
-    $ctm_email = mysqli_real_escape_string($con, $_POST['ctm_email']);
-    $ctm_phone = mysqli_real_escape_string($con, $_POST['ctm_phone']);
-    $ctm_address = mysqli_real_escape_string($con, $_POST['ctm_address']);
+    $ctm_name = ['ctm_name'];
+    $ctm_sname = ['ctm_sname'];
+    $ctm_user = ['ctm_user'];
+    $ctm_email = ['ctm_email'];
+    $ctm_phone = ['ctm_phone'];
+    $ctm_address = ['ctm_address'];
 
     $query = "INSERT INTO customer (ctm_name,ctm_sname,ctm_user,ctm_email,ctm_phone,ctm_address) VALUES ('$ctm_name','$ctm_sname','$ctm_user','$ctm_email','$ctm_phone','$ctm_address')";
 
@@ -63,13 +63,13 @@ if(isset($_POST['save_customer']))
     if($query_run)
     {
         $_SESSION['message'] = "Student Created Successfully";
-        header("Location: student-create.php");
+        header("Location: index1.php");
         exit(0);
     }
     else
     {
         $_SESSION['message'] = "Student Not Created";
-        header("Location: student-create.php");
+        header("Location: index1.php");
         exit(0);
     }
 }

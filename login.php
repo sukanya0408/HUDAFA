@@ -14,7 +14,7 @@ session_start();
 <body>
 <div class="container">
   <div class="row">
-    <div class="col-md-3 badge bg-light text-dark ">
+    <div class="col-md-6 badge bg-light text-dark ">
      <h5> Login </h5>
      <form method="POST" action="login_check.php">
 <input type="text" name="ctm_user" class="form-control" required placeholder="username"> <br>
