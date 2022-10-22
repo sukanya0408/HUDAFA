@@ -27,7 +27,7 @@
                                     <th>ชื่อ</th>
                                     <th>นามสกุล</th>
                                     <th>ชื่อผู้ใช้</th>
-                                    <th>รหัสผ่าน</th>
+                                    <!-- <th>รหัสผ่าน</th> -->
                                     <th>อีเมล</th>
                                     <th>เบอร์โทรศัพท์</th>
                                     <th>ที่อยู่</th>
@@ -36,14 +36,24 @@
                             <tbody>
                                 <?php
                                     $query = "SELECT * FROM customer";
-                                    $query_run = musqli_query($conn,$query);
+                                    $query_run = mysqli_query($conn,$query);
 
                                     if(mysqli_num_rows($query_run) > 0){
                                         foreach($query_run as $customer){
-                                        // echo $customer['ctm_name'];
                                         ?>
                                         <tr>
-                                            <td></td>
+                                            <td><?=$customer['customer_id']; ?></td>
+                                            <td><?=$customer['ctm_name']; ?></td>
+                                            <td><?=$customer['ctm_sname']; ?></td>
+                                            <td><?=$customer['ctm_user']; ?></td>
+                                            <!-- <td><?=$customer['ctm_password']; ?></td> -->
+                                            <td><?=$customer['ctm_email']; ?></td>
+                                            <td><?=$customer['ctm_phone']; ?></td>
+                                            <td><?=$customer['ctm_address']; ?></td>
+                                            <td>
+                                                <a href="customer_edit.php?id=<?=$customer['customer_id']; ?>" class="btn btn-success btn-sm">แก้ไข</a>
+                                                <a href="" class="btn btn-danger btn-sm">ลบ</a>
+                                            </td>
                                         </tr>
                                         <?php
 
@@ -53,9 +63,6 @@
                                         echo "<5h> No Record Found </h5>";
                                     }
                                 ?>
-                                <tr>
-                                    <td>1</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
