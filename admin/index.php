@@ -1,13 +1,26 @@
 <?php
 session_start();
-include 'condb.php'
+include 'condb.php';
 // if(!isset($_SESSION["admin_id"])){
 //     $show=header("location:login.php")
 // }
 
-$sql1="select COUNT(orderID) AS order_id from tb_order where order_status='1' ";
+$sql1="select COUNT(orderID) AS order_no from tb_order where order_status='1' ";
 $hand=mysqli_query($conn,$sql1);
 $row1=mysqli_fetch_array($hand);
+
+$sql2="select COUNT(orderID) AS order_yes from tb_order where order_status='2' ";
+$hand2=mysqli_query($conn,$sql2);
+$row2=mysqli_fetch_array($hand2);
+
+$sql3="select COUNT(orderID) AS order_cancle from tb_order where order_status='0' ";
+$hand3=mysqli_query($conn,$sql3);
+$row3=mysqli_fetch_array($hand3);
+
+//รายการสินค้าที่เหลือน้อยกว่า10ชิ้น
+$sql4="select COUNT(pro_id) AS pro_num from product where amount < 10" ;
+$hand4=mysqli_query($conn,$sql4);
+$row4=mysqli_fetch_array($hand4);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,36 +52,36 @@ $row1=mysqli_fetch_array($hand);
                 <div class="row">
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-primary text-white mb-4">
-                            <div class="card-body">รายการสั่งซื้อสินค้า (ยังไม่ได้ชำระเงิน)<h4><?=$row1['order_no']?></h4></div>
+                            <div class="card-body">รายการสั่งซื้อสินค้า (ยังไม่ได้ชำระเงิน)<h4>[<?=$row1['order_no']?>]</h4></div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="report_order.php">ดูรายละเอียด</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-warning text-white mb-4">
-                            <div class="card-body">เบเกอรี่ขายดี</div>
+                            <div class="card-body">รายการสั่งซื้อสินค้า (ชำระเงินแล้ว)<h4>[<?=$row2['order_yes']?>]</h4></div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="report_order_yes.php">ดูรายละเอียด</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-success text-white mb-4">
-                            <div class="card-body">Success Card</div>
+                            <div class="card-body">รายการสั่งซื้อสินค้า (ยกเลิก)<h4>[<?=$row3['order_cancle']?>]</h4></div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="report_order_no.php">ดูรายละเอียด</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-danger text-white mb-4">
-                            <div class="card-body">Danger Card</div>
+                            <div class="card-body">รายการสินค้าที่เหลือน้อยกว่า 10 ชิ้น<h4>[<?=$row4['pro_num']?>]</h4></div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="pro-stock.php">View Details</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
@@ -134,7 +147,7 @@ $row1=mysqli_fetch_array($hand);
                                     <td><?=$row['price']?></td>
                                     <td><?=$row['amount']?></td>
 
-                                    <td><a href="addStock.php?id=<?=$row['pro_id']?>" class="btn btn-secondary">เพิ่ม</a></tr>
+                                    <td><a href="addStock.php?id=<?=$row['pro_id']?>" class="btn btn-warning">เพิ่ม</a></tr>
 
                                 </tr>
                                 <?php

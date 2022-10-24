@@ -37,7 +37,7 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="show_product2.php">สินค้าคงเหลือ</a>
+                                    <a class="nav-link" href="pro-stock.php">สินค้าคงเหลือน้อยกว่า10</a>
                                     <a class="nav-link" href="report_order.php">การสั่งซื้อสินค้า</a>
                                 </nav>
                             </div>
