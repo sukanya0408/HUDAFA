@@ -2,12 +2,12 @@
 include 'condb.php';
 session_start();
 
-$ctm_user = $_POST['ctm_user'];
-$ctm_password = $_POST['ctm_password'];
+$admin_username = $_POST['admin_username'];
+$admin_password = $_POST['admin_password'];
 
-$ctm_password=hash('sha512',$ctm_password);
+$admin_password=hash('sha512',$admin_password);
 
-$sql="SELECT * FROM customer WHERE ctm_user='$ctm_user' and ctm_password='$ctm_password' ";
+$sql="SELECT * FROM admin WHERE admin_username='$admin_username' and admin_password='$admin_password' ";
 $result=mysqli_query($conn,$sql);
 $row =mysqli_fetch_array($result);
 
