@@ -24,8 +24,8 @@ session_start();
     <div class="col-md-6 badge bg-light text-dark ">
      <h5> Login </h5>
      <form method="POST" action="login_check.php">
-<input type="text" name="ctm_user" class="form-control" required placeholder="username"> <br>
-<input type="password" name="ctm_password" class="form-control" required placeholder="password"> <br>
+<input type="text" name="admin_username" class="form-control" required placeholder="username"> <br>
+<input type="password" name="admin_password" class="form-control" required placeholder="password"> <br>
 <?php
     if(isset($_SESSION["Error"])){
         echo "<div class = 'text-danger'>";
