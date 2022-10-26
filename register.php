@@ -1,67 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>สมัครสมาชิก</title>
-  <link rel="stylesheet" href="css/style.css">
+
+    <title>สมัครสมาชิก</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap v5.1.3 CDNs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+        * {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
 </head>
+
 <body>
-  <?php
-  require('condb.php');
 
+    <div class="login">
 
-  if(isset($_REQUEST['ctm_user'])){
-    $ctm_name    = stripcslashes($_REQUEST['ctm_name']);
-    $ctm_name = mysqli_real_escape_string($con, $ctm_name);
+        <h1 class="text-center">สร้างบัญชี</h1>
 
-    $ctm_sname    = stripcslashes($_REQUEST['ctm_sname']);
-    $ctm_sname = mysqli_real_escape_string($con, $ctm_sname);
-    
-    $ctm_user    = stripcslashes($_REQUEST['ctm_user']);
-    $ctm_user = mysqli_real_escape_string($con, $ctm_user);
+        <form class="needs-validation" action="insert_register.php" method="POST">
+            <div class="form-group was-validated">
+                <label class="form-label text-success">ชื่อ</label>
+                <input class="form-control" type="text" name="ctm_name" required>
+                <div class="invalid-feedback">
+            </div>
+            <div class="form-group was-validated">
+                <label class="form-label text-success">นามสกุล</label>
+                <input class="form-control" type="text" name="ctm_sname" required>
+                <div class="invalid-feedback">
 
-    $ctm_password   = stripcslashes($_REQUEST['ctm_password']);
-    $ctm_password = mysqli_real_escape_string($con, $ctm_password);
+                </div>
+            </div>
+            <div class="form-group was-validated">
+                <label class="form-label text-success">อีเมล</label>
+                <input class="form-control" type="email" name="ctm_email" required>
+                <div class="invalid-feedback">
 
-    $ctm_email   = stripcslashes($_REQUEST['ctm_email']);
-    $ctm_email = mysqli_real_escape_string($con, $ctm_email);
+                </div>
+            </div>
+            <div class="form-group was-validated">
+                <label class="form-label text-success">เบอร์โทร</label>
+                <input class="form-control" type="text" name="ctm_phone" required>
+                <div class="invalid-feedback">
 
-    $ctm_phone   = stripcslashes($_REQUEST['ctm_phone']);
-    $ctm_phone = mysqli_real_escape_string($con, $ctm_phone);
+                </div>
+                <div class="form-group was-validated">
+                    <label class="form-label text-success">ที่อยู่</label>
+                    <input class="form-control" type="text" name="ctm_address" required>
+                    <div class="invalid-feedback">
 
-    $ctm_address   = stripcslashes($_REQUEST['ctm_address']);
-    $ctm_address = mysqli_real_escape_string($con, $ctm_address);
+                    </div>
+                    <div class="form-group was-validated">
+                        <label class="form-label text-success">รหัสผ่าน</label>
+                        <input class="form-control" type="password" name="ctm_password" id="myPassword" required>
+                        <div class="invalid-feedback">
 
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" onclick="passShow()">
+                            <label>แสดงรหัสผ่าน</label>
+                        </div>
+                        <input class="btn btn-success w-100" type="submit" value="สมัครสมาชิก">
+                        <div class="mt-2">
+                            <a href="login.php" class="btn btn-primary w-100">เข้าสู่ระบบ</a>
+                        </div>
+        </form>
 
-    $query = "INSERT INTO customer (ctm_name,ctm_sname,ctm_user,ctm_password,ctm_email,ctm_phone,)
-    VALUES ($ctm_name,$ctm_sname, $ctm_user,$ctm_password,$ctm_email,$ctm_phone,$ctm_address)";
-
-    $result = mysqli_query($con, $query);
-
-    if($result){
-      echo "<div class='form'>
-      <h3> สมัครสมาชิกสำเร็จ </h3>
-      <br> Click here to <a href='login.php'>Login</a>
-      </div>";
-    }else{
-    }
-  ?>
-    <div class="form">
-      <h1>สมัครสมาชิก</h1>
-      <form name="register" action="" methode="post">
-        <input type="ctm_name" name="ctm_name" placeholder="ctm_name" require>
-        <input type="ctm_sname" name="ctm_sname" placeholder="ctm_sname" require>
-        <input type="ctm_user" name="ctm_user" placeholder="ctm_user" require>
-        <input type="ctm_password" name="ctm_password" placeholder="ctm_password" require>
-        <input type="ctm_email" name="ctm_email" placeholder="ctm_email" require>
-        <input type="ctm_phone" name="ctm_phone" placeholder="ctm_phone" require>
-        <input type="ctm_address" name="ctm_address" placeholder="ctm_address" require>
-        <input type="submit" name="submit" value="register">
-      </form>
     </div>
-    <?php }  ?>
+
+    <script src="js/sheet.js"></script>
 
 </body>
+
 </html>

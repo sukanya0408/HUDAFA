@@ -52,7 +52,7 @@ $row4=mysqli_fetch_array($hand4);
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Dashboard</h1>
+                <h1 class="mt-4">จัดการข้อมูล</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item active"></li>
                 </ol>
@@ -94,7 +94,7 @@ $row4=mysqli_fetch_array($hand4);
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-xl-6">
                         <div class="card mb-4">
                             <div class="card-header">
@@ -103,8 +103,8 @@ $row4=mysqli_fetch_array($hand4);
                             </div>
                             <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
                         </div>
-                    </div>
-                    <div class="col-xl-6">
+                    </div> -->
+                    <!-- <div class="col-xl-6">
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-chart-bar me-1"></i>
@@ -113,11 +113,11 @@ $row4=mysqli_fetch_array($hand4);
                             <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="card mb-4">
                     <div class="card-header">
                         <i class="fas fa-table me-1"></i>
-                        DataTable Example
+                        ตารางรายการสินค้า
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple">

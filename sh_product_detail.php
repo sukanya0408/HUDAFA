@@ -26,7 +26,7 @@ include 'condb.php';
             $row=mysqli_fetch_array($result);
         ?>
             <div class = "col-md-4">
-                <img src="img/<?=$row['image']?>" width = "350px" class="mt-2 p-2 my-2 border" />
+                <img src="img/<?=$row['image']?>" width="300px" height="250" class="mt-2 p-2 my-2 border" />
             </div>
             <div class = "col-md-6">
             ID : <?=$row['pro_id']?> <br>

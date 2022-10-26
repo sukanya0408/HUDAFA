@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>เข้าสู่ระบบ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" >
-</head>
-<body>
-    <?php
-    require ('condb.php');
-    session_start();
 
-    if(isset($_POST['ctm_name'])){
+    <!-- Bootstrap v5.1.3 CDNs -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sheet.js"></script>
 
-        $ctm_user = stripslashes($_REQUEST['ctm_user']);
-        $ctm_user = mysqli_real_escape_string($con, $ctm_user);
-
-        $ctm_password = stripslashes($_REQUEST['ctm_password']);
-        $ctm_password = mysqli_real_escape_string($con, $ctm_password);
-
-
-        $query = "SELECT * FROM customer WHERE ctm_user='$ctm_user' AND password='".md5($ctm_password)."'";
-
-
-        $result = mysqli_query($con, $query) or die(mysql_error());
-        $rows = mysqli_num_rows($result);
-
-        if($row == 1){
-            $_SESSION['ctm_user'] = $ctm_user;
-            header("Location: show_product.php");
-        }else{
-            echo "
-            <div class='form'>
-            <h3>Username</h3>
-            <br> Click <a href='login.php'>Login</a>
-            </div> ";
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+        * {
+            font-family: 'Kanit', sans-serif;
         }
-    }else{
-?>
+    </style>
+</head>
 
-        <div class="form">
-            <h1>Login</h1>
-            <form action="" method="post" name="login">
-            <input type="text" name="ctm_user" placeholder="ctm_user" require>
-            <input type="text" name="ctm_password" placeholder="ctm_password" require>
-            </form>
-        </div>
-            <p>Not register yet? <a href="register.php"></a></p>
-        <?php } ?>
+<body>
+
+    <div class="login">
+
+        <h1 class="text-center">เข้าสู่ระบบ</h1>
+
+        <form class="needs-validation" action="login_check.php" method="POST">
+            <div class="form-group was-validated">
+                <label class="form-label text-success" for="user">username</label>
+                <input class="form-control" type="type" name="ctm_user" required>
+                <div class="invalid-feedback">
+                    โปรดกรอกชื่อผู้ใช้
+                </div>
+            </div>
+            <div class="form-group was-validated">
+                <label class="form-label text-success" for="password">Password</label>
+                <input class="form-control" type="password" name="ctm_password" id="myPassword" required>
+                <div class="invalid-feedback">
+                    กรุณาใส่กรอกรหัสผ่าน
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" onclick="passShow()">
+                <label>แสดงรหัสผ่าน</label>
+            </div>
+            <div>
+                <input class="btn btn-success w-100" type="submit" name="login" value="เข้าสู่ระบบ">
+            </div>
+            <div class="mt-2">
+                <a href="register.php" class="btn btn-primary w-100">สมัครสมาชิกผู้ใช้ใหม่</a>
+            </div>
+        </form>
+
+    </div>
+
 </body>
+
 </html>

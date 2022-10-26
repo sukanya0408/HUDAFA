@@ -52,7 +52,7 @@
                                         ข้อมูลลูกค้า
                                         <div class="sb-sidenav-collapse-arrow"></div>
                                     </a>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    <a class="nav-link collapsed" href="" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
                                         ข้อมูลเบเกอรี่
                                         <div class="sb-sidenav-collapse-arrow"></div>
                                     </a>
