@@ -123,7 +123,7 @@
                                             </td>
                                             <td>
                                             <div>
-                                            <a href="report_order_detail.php?id=<?=$row['orderID']?>" class="btn btn-warning">รายละเอียด</a>
+                                            <a href="report_order_detail.php?id=<?=$row['orderID']?>" class="btn btn-warning" >รายละเอียด</a>
                                             <a href="pay_order.php?id=<?=$row['orderID']?>" class="btn btn-info" onclick="del1(this.href); return false;">ปรับสถานะ</a>
                                             <a href="cancel_order.php?id=<?=$row['orderID']?>" class="btn btn-danger" onclick="del(this.href); return false;">ยกเลิก</a>
                                             </div>

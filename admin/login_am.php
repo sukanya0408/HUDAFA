@@ -32,14 +32,12 @@
                 <label class="form-label text-success" for="username">Username</label>
                 <input class="form-control" type="type" name="admin_username" required>
                 <div class="invalid-feedback">
-                    โปรดกรอกชื่อผู้ใช้
                 </div>
             </div>
             <div class="form-group was-validated">
                 <label class="form-label text-success" for="password">Password</label>
                 <input class="form-control" type="password" name="admin_password" id="myPassword" required>
                 <div class="invalid-feedback">
-                    กรุณากรอกรหัสผ่าน
                 </div>
             </div>
             <div class="form-group">

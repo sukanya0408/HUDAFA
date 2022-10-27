@@ -25,21 +25,19 @@
 
     <div class="login">
 
-        <h1 class="text-center">เข้าสู่ระบบ</h1>
+        <h1 class="text-center text-success">LOGIN</h1>
 
         <form class="needs-validation" action="login_check.php" method="POST">
             <div class="form-group was-validated">
                 <label class="form-label text-success" for="user">username</label>
                 <input class="form-control" type="type" name="ctm_user" required>
                 <div class="invalid-feedback">
-                    โปรดกรอกชื่อผู้ใช้
                 </div>
             </div>
             <div class="form-group was-validated">
                 <label class="form-label text-success" for="password">Password</label>
                 <input class="form-control" type="password" name="ctm_password" id="myPassword" required>
                 <div class="invalid-feedback">
-                    กรุณาใส่กรอกรหัสผ่าน
                 </div>
             </div>
             <div class="form-group">
@@ -47,10 +45,15 @@
                 <label>แสดงรหัสผ่าน</label>
             </div>
             <div>
-                <input class="btn btn-success w-100" type="submit" name="login" value="เข้าสู่ระบบ">
+                <center>
+            <button type="submit" name="login" class="btn btn-success w-100">เข้าสู่ระบบ</button>
+            <div class="mt-2">
+            <a href="register.php" button class="btn btn-primary w-100">สมัครสมาชิกผู้ใช้ใหม่</button></a>
+            </center>
+                <!-- <input class="btn btn-success w-100" type="submit" name="login" value="เข้าสู่ระบบ"> -->
             </div>
             <div class="mt-2">
-                <a href="register.php" class="btn btn-primary w-100">สมัครสมาชิกผู้ใช้ใหม่</a>
+                <!-- <a href="register.php" class="btn btn-primary w-100">สมัครสมาชิกผู้ใช้ใหม่</a> -->
             </div>
         </form>
 

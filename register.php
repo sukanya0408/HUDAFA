@@ -24,7 +24,7 @@
 
     <div class="login">
 
-        <h1 class="text-center">สร้างบัญชี</h1>
+        <h1 class="text-center text-success"">REGISTER</h1>
 
         <form class="needs-validation" action="insert_register.php" method="POST">
             <div class="form-group was-validated">
@@ -36,41 +36,48 @@
                 <label class="form-label text-success">นามสกุล</label>
                 <input class="form-control" type="text" name="ctm_sname" required>
                 <div class="invalid-feedback">
-
+                </div>
+            </div>
+            <div class="form-group was-validated">
+                <label class="form-label text-success">username</label>
+                <input class="form-control" type="text" name="ctm_user" required>
+                <div class="invalid-feedback">
                 </div>
             </div>
             <div class="form-group was-validated">
                 <label class="form-label text-success">อีเมล</label>
                 <input class="form-control" type="email" name="ctm_email" required>
                 <div class="invalid-feedback">
-
                 </div>
             </div>
             <div class="form-group was-validated">
                 <label class="form-label text-success">เบอร์โทร</label>
                 <input class="form-control" type="text" name="ctm_phone" required>
                 <div class="invalid-feedback">
-
                 </div>
                 <div class="form-group was-validated">
                     <label class="form-label text-success">ที่อยู่</label>
                     <input class="form-control" type="text" name="ctm_address" required>
                     <div class="invalid-feedback">
-
                     </div>
                     <div class="form-group was-validated">
                         <label class="form-label text-success">รหัสผ่าน</label>
                         <input class="form-control" type="password" name="ctm_password" id="myPassword" required>
                         <div class="invalid-feedback">
-
                         </div>
                         <div class="form-group">
                             <input type="checkbox" onclick="passShow()">
                             <label>แสดงรหัสผ่าน</label>
                         </div>
-                        <input class="btn btn-success w-100" type="submit" value="สมัครสมาชิก">
+                        <center>
+                            <button type="submit" name="login" class="btn btn-success w-100" value="สมัครสมาชิก">สมัครสมาชิก</button>
+                            <!-- <input class="btn btn-success w-100" type="submit" value="สมัครสมาชิก"></button> -->
+                            <div class="mt-2">
+                            <a href="login.php" button class="btn btn-primary w-100">เข้าสู่ระบบ</button></a>
+                        </center>
+                        <!-- <input class="btn btn-success w-100" type="submit" value="สมัครสมาชิก">
                         <div class="mt-2">
-                            <a href="login.php" class="btn btn-primary w-100">เข้าสู่ระบบ</a>
+                            <a href="login.php" class="btn btn-primary w-100">เข้าสู่ระบบ</a> -->
                         </div>
         </form>
 

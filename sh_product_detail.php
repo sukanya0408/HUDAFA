@@ -17,14 +17,17 @@ include 'condb.php';
     </style>
 </head>
 <body>
+    
     <div class = "container">
         <div class = "row">
+            
         <?php
             $ids=$_GET['id'];
             $sql = "SELECT * FROM product,type WHERE product.type_id= type.type_id and product.pro_id='$ids' ";
             $result = mysqli_query($conn, $sql);
             $row=mysqli_fetch_array($result);
         ?>
+        
             <div class = "col-md-4">
                 <img src="img/<?=$row['image']?>" width="300px" height="250" class="mt-2 p-2 my-2 border" />
             </div>
