@@ -25,7 +25,7 @@
 
     <div class="login">
 
-        <h1 class="text-center text-success">LOGIN</h1>
+        <h2 class="text-center text-success">LOGIN</h2>
 
         <form class="needs-validation" action="login_check.php" method="POST">
             <div class="form-group was-validated">

@@ -24,7 +24,7 @@
 
     <div class="login">
 
-        <h1 class="text-center text-success"">REGISTER</h1>
+        <h3 class="text-center text-success">REGISTER</h3>
 
         <form class="needs-validation" action="insert_register.php" method="POST">
             <div class="form-group was-validated">
