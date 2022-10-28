@@ -41,23 +41,18 @@
                                     <a class="nav-link" href="report_order.php">การสั่งซื้อสินค้า</a>
                                 </nav>
                             </div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                ข้อมูลพื้นฐาน
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-bread-slice"></i></div>
+                                ประเภทสินค้า
                             </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        ข้อมูลลูกค้า
-                                        <div class="sb-sidenav-collapse-arrow"></div>
-                                    </a>
-                                    <a class="nav-link collapsed" href="fr_product.php" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        ข้อมูลเบเกอรี่
-                                        <div class="sb-sidenav-collapse-arrow"></div>
-                                    </a>
-                                </nav>
-                            </div>
+                            <a class="nav-link" href="sh_product.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-bread-slice"></i></div>
+                                ข้อมูลสินค้า
+                            </a>
+                            <a class="nav-link" href="sh_cus.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
+                                ข้อมูลลูกค้า
+                            </a>
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-truck-fast"></i></div>
                                 การจัดส่งสินค้า

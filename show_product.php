@@ -43,7 +43,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">แก้ไขโปรไฟล์</a></li>
+                        <li><a class="dropdown-item" href="edit_profile.php">แก้ไขโปรไฟล์</a></li>
                         <!-- <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li> -->
                         <li><a class="dropdown-item" href="logout.php">Logout</a></li>
@@ -63,7 +63,7 @@
             ?>
             <div class = "col-sm-3">
                 <div class="text-center">
-                <img src="img/<?=$row['image']?>" width="300px" height="250" class="mt-5 p-2 my-2 border"> <br>
+                <img src="admin/image/<?=$row['image']?>" width="300px" height="250" class="mt-5 p-2 my-2 border"> <br>
                 ID : <?=$row['pro_id']?><br>
                 <b class = "text-success"><?=$row['pro_name']?></b><br>
                 ราคา <b class="text-danger"> <?=$row['price']?> </b> บาท <br>

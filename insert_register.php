@@ -6,7 +6,7 @@ $ctm_user = $_POST['ctm_user'];
 $ctm_password = $_POST['ctm_password'];
 $ctm_email = $_POST['ctm_email'];
 $ctm_phone = $_POST['ctm_phone'];
-$ctm_address = $_POST['ctm_addess'];
+$ctm_address = $_POST['ctm_address'];
 
 $ctm_password=hash('sha512',$ctm_password);
 

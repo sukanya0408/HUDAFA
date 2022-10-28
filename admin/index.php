@@ -147,7 +147,7 @@ $row4=mysqli_fetch_array($hand4);
 
 ?>
                                 <tr>
-                                    <td><img src="../img/<?=$row['image']?>" width="150" height="100"></td>
+                                    <td><img src="../admin/image/<?=$row['image']?>" width="150" height="100"></td>
                                     <td><?=$row['pro_id']?></td>
                                     <td><?=$row['pro_name']?></td>
                                     <td><?=$row['type_name']?></td>

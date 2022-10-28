@@ -24,8 +24,8 @@ include 'condb.php';
             </div>
                 <form name="form1" method="post" action="insert_product.php" enctype="multipart/form-data">
                 <label> ชื่อสินค้า</label>
-                <input type="text" name="pname" class="form-control" placeholder="ชื่อสินค้า..." required>
-                
+                <input type="text" name="pname" class="form-control" required>
+            
                 <label> ประเภทสินค้า</label>
                 <select class="form-select" name="typeID">
                    <?php
@@ -40,9 +40,9 @@ include 'condb.php';
                     ?>
                 </select>
                 <label> ราคา </label>
-                <input type="number" name="price" class="form-control" placeholder="ราคา..." required> <br>
+                <input type="number" name="price" class="form-control" required> <br>
                 <label> จำนวน </label>
-                <input type="number" name="num" class="form-control" placeholder="จำนวน..." required> <br>
+                <input type="number" name="num" class="form-control"required> <br>
                 <label> รูปภาพ </label>
                 <input type="file" name="file1" required> <br> <br>
 
@@ -50,9 +50,6 @@ include 'condb.php';
                 <a class="btn btn-danger" href="index.php" role="button">ยกเลิก</a>
                 </form>
             </div>
-
-
-
         </div>
     </div>
 </body>

@@ -55,7 +55,7 @@ $p_typeID=$rs['type_id'];
                 <label> จำนวน </label>
                 <input type="number" name="num" class="form-control" value="<?php echo $rs['amount']?>" > <br>
                 <label> รูปภาพ </label><br><br>
-                 <img src="image/<?php echo $rs['image']?>"  width="200px" height="150px" ><br><br>
+                 <img src="../admin/image/<?php echo $rs['image']?>"  width="200px" height="150px" ><br><br>
                 <input type="file" name="file1" > <br> <br>
                 <input type="hidden" name="txtimg" class="form-control" value="<?php echo $rs['image']?>" >
                  

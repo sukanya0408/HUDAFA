@@ -101,7 +101,7 @@ mysqli_close($conn);
 ข้อมูลสำหรับจัดส่ง 
             </div>
             ชื่อ - นามสกุล
-            <input type="text" name="cus_name" class="form-control" required placeholder="ชื่อ-นามสกุล"> <br>
+            <input type="text" name="cus_name" class="form-control" required placeholder="ชื่อ-นามสกุล" > <br>
             ที่อยู่จัดส่งสินค้า
            <textarea class="form-control" required placeholder="ที่อยู่" name="cus_add" row="3"></textarea> <br>
             เบอร์โทรศัพท์
