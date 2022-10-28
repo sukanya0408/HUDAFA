@@ -14,7 +14,7 @@
                         <li><a class="dropdown-item" href="#!">Settings</a></li>
                         <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item" href="logout_am.php">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -52,12 +52,20 @@
                                         ข้อมูลลูกค้า
                                         <div class="sb-sidenav-collapse-arrow"></div>
                                     </a>
-                                    <a class="nav-link collapsed" href="sh_product.php" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    <a class="nav-link collapsed" href="fr_product.php" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
                                         ข้อมูลเบเกอรี่
                                         <div class="sb-sidenav-collapse-arrow"></div>
                                     </a>
                                 </nav>
                             </div>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                                การจัดส่งสินค้า
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-bread-slice"></i></div>
+                                เบเกอรี่ขายดี
+                            </a>
                             <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>

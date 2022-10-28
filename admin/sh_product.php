@@ -44,7 +44,7 @@ while($row=mysqli_fetch_array($hand)){
             <td><?=$row['price']?></td>
             <td><?=$row['amount']?></td>
             <td><image src="image/<?=$row['image']?>" width="150px" height="100px"></td>
-            <td><a href="edit_product.php?id=<?=$row['pro_id']?>"> Edit</a></td>
+            <td><a href="edit_product.php?id=<?=$row['pro_id']?>" class="btn btn-success"> Edit</a></td>
            </tr>
            <?php
            }

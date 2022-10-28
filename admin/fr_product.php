@@ -47,7 +47,7 @@ include 'condb.php';
                 <input type="file" name="file1" required> <br> <br>
 
                 <button type="submit" class="btn btn-success">บันทึก</button>
-                <a class="btn btn-danger" href="sh_product.php" role="button">ยกเลิก</a>
+                <a class="btn btn-danger" href="index.php" role="button">ยกเลิก</a>
                 </form>
             </div>
 
