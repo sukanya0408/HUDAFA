@@ -41,7 +41,11 @@
                                     <a class="nav-link" href="report_order.php">การสั่งซื้อสินค้า</a>
                                 </nav>
                             </div>
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="show_product2.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-bread-slice"></i></div>
+                                สินค้าคงเหลือ
+                            </a>
+                            <a class="nav-link" href="sh_type.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-bread-slice"></i></div>
                                 ประเภทสินค้า
                             </a>
@@ -62,11 +66,11 @@
                                 เบเกอรี่ขายดี
                             </a>
                             <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Charts
                             </a>
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tables
                             </a>

@@ -21,6 +21,11 @@ include 'condb.php';
 </head>
 <body>
 <?php include 'menu1.php'   ?>
+<div id="layoutSidenav_content">
+<main>
+                    <div class="container-fluid px-4">
+                        <div class="card mb-4 mt-4">
+                            <div class="card-header">
     <div class="container">
     <div class="alert alert-primary  h2 text-center mb-4 mt-4" role="alert">
     แสดงข้อมูลลูกค้า
@@ -37,6 +42,7 @@ include 'condb.php';
             <th>เบอร์โทรศัพท์</th>
             <th>ที่อยู่</th>
             <th>แก้ไข</th>
+            <th>ลบ</th>
            </tr> 
            
 <?php
@@ -53,15 +59,15 @@ while($row=mysqli_fetch_array($hand)){
             <td><?=$row['ctm_email']?></td>
             <td><?=$row['ctm_phone']?></td>
             <td><?=$row['ctm_address']?></td>
-            <td><a href="edit_cus.php?id=<?=$row['customer_id']?>" class="btn btn-success"> Edit</a></td>
+            <td><a href="edit_cus.php?id=<?=$row['customer_id']?>" class="btn btn-success"> แก้ไข</a></td>
+            <td><a href="delete_cus.php?id=<?=$row['customer_id']?>" class="btn btn-danger"> ลบ</a></td>
            </tr>
            <?php
            }
            mysqli_close($conn);
            ?>
         </table>
-        
     </div>
-    
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

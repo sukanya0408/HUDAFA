@@ -22,12 +22,9 @@
     </head>
     <body class="sb-nav-fixed">
         <?php include 'menu1.php';   ?>
-
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        
-
                         <div class="card mb-4 mt-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>

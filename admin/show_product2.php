@@ -37,14 +37,22 @@ include 'condb.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-
-    <title>show product</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
+<?php include 'menu1.php';   ?>
 <body>
+    <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        
+
+                        <div class="card mb-4 mt-4">
+                            <div class="card-header">
     <div class="container">
         <br>
-        <h4 class="text-center"><b>แสดงข้อมูลสินค้า</b></h4>
+        <h4 class="text-center"><b>แสดงข้อมูลสินค้าคงเหลือ</b></h4>
         <br>
         <table class="table">
     <tr>
@@ -65,6 +73,7 @@ include 'condb.php';
         <td><?=$row['pro_name']?></td>
         <td><?=$row['amount']?></td>
         <td class="text-end"><?=$row['price']?></td>
+        
         
     </tr>
     <?php
