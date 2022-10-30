@@ -31,7 +31,7 @@ include 'condb.php';
     แสดงข้อมูลประเภทสินค้า
             </div>
             <a class="btn btn-primary mb-4" href="fr_type.php" role="button">ประเภทสินค้า+</a> <br>
-    <table class="table table-striped table-hover">
+            <table id="datatablesSimple" class="table table-striped"> 
            <tr>
             <th>รหัสสินค้า</th>
             <th>ชื่อประเภท</th>
@@ -47,7 +47,7 @@ while($row=mysqli_fetch_array($hand)){
             <td><?=$row['type_id']?></td>
             <td><?=$row['type_name']?></td>
             <td><a href="edit_type.php?id=<?=$row['type_id']?>" class="btn btn-success">แก้ไข</a></td>
-            <td><a href="delete_type?id=<?=$row['type_id']?>" class="btn btn-danger">ลบ</a></td>
+            <td><a href="delete_type.php?id=<?=$row['type_id']?>" class="btn btn-danger">ลบ</a></td>
         
            </tr>
            <?php
@@ -59,3 +59,10 @@ while($row=mysqli_fetch_array($hand)){
                 <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>

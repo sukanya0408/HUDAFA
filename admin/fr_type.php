@@ -31,9 +31,9 @@ include 'condb.php';
             <div class="alert alert-primary  h4 text-center mb-4" role="alert">
             เพิ่มประเภทสินค้า
             </div>
-                <form name="form1" method="post" action="insert_type.php" enctype="multipart/form-data">
+                <form name="form1" method="post" action="insert_type.php">
                 <label> ชื่อประเภท</label>
-                <input type="text" name="type" class="form-control" required><br>
+                <input type="text" name="type_name" class="form-control" required><br>
 
                 <button type="submit" class="btn btn-success">บันทึก</button>
                 <a class="btn btn-danger" href="sh_type.php" role="button">ยกเลิก</a>

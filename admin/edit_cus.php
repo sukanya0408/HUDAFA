@@ -40,9 +40,9 @@ $rs=mysqli_fetch_array($result);
 
                 <form name="form1" method="post" action="update_cus.php" enctype="multipart/form-data">
                 <label> รหัสลูกค้า</label>
-                <input type="text" name="cusid" class="form-control" readonly value="<?php echo $rs['customer_id']?>" >
+                <input type="text" name="cusid" class="form-control" readonly value="<?php echo $rs['customer_id']?>" ><br>
                 <label> ชื่อ</label>
-                <input type="text" name="name" class="form-control" value="<?php echo $rs['ctm_name']?>" >
+                <input type="text" name="name" class="form-control" value="<?php echo $rs['ctm_name']?>" ><br>
                 <label> นามสกุล </label>
                 <input type="text" name="sname" class="form-control"  value="<?php echo $rs['ctm_sname']?>" > <br>
                 <label> ชื่อผู้ใช้ </label>

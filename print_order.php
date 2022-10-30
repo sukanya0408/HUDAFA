@@ -49,11 +49,11 @@ $total_price = $rs['total_price'];
       <th>ราคารวม</th>
     </tr>
   </thead>
-  <tbody>
+  
 <?php 
 $sql1 ="select * from order_detail d,product p where d.pro_id=p.pro_id and orderID= '" .$_SESSION["order_id"]. "'";
 $result1 = mysqli_query($conn,$sql1);
-while($row=mysqli_fetch_array($result1)){
+while($row=mysqli_fetch_array($resul t1)){
 
 
 
@@ -66,7 +66,7 @@ while($row=mysqli_fetch_array($result1)){
       <td><?=$row['orderQty']?></td>
       <td><?=$row['Total']?></td>
     </tr>
-  </tbody>
+  
 <?php
 }
 ?>

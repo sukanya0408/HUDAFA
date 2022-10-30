@@ -41,10 +41,6 @@
                                     <a class="nav-link" href="report_order.php">การสั่งซื้อสินค้า</a>
                                 </nav>
                             </div>
-                            <a class="nav-link" href="show_product2.php">
-                                <div class="sb-nav-link-icon"><i class="fa-duotone fa-house"></i></i></div>
-                                สินค้าคงเหลือ
-                            </a>
                             <a class="nav-link" href="sh_type.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-bread-slice"></i></div>
                                 ประเภทสินค้า
@@ -57,13 +53,17 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
                                 ข้อมูลลูกค้า
                             </a>
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="trans.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-truck-fast"></i></div>
                                 การจัดส่งสินค้า
                             </a>
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></i></div>
                                 เบเกอรี่ขายดี
+                            </a>
+                            <a class="nav-link" href="show_product2.php">
+                                <div class="sb-nav-link-icon"><i class="fa-duotone fa-house"></i></i></div>
+                                สินค้าคงเหลือ
                             </a>
                             <!-- <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="#">

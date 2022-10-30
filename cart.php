@@ -42,10 +42,13 @@ include 'condb.php';
             <th>ลบ</th>
         </tr>
 <?php
-// echo "NOOOOOOOOOOO!!!!!"; 
 $Total = 0;
 $sumPrice = 0;
 $m = 1;
+$sumTotal=0;
+
+if(isset($_SESSION["intLine"]))  {
+
 for ($i=0; $i <= (int)$_SESSION["intLine"]; $i++){ 
     if(($_SESSION["strProductID"][$i]) != ""){
         $sql="select * from product where pro_id ='" . $_SESSION["strProductID"][$i] . "' " ;
@@ -56,7 +59,8 @@ for ($i=0; $i <= (int)$_SESSION["intLine"]; $i++){
         $Total = $_SESSION["strQty"][$i];
         $sum = $Total * $row_pro['price'];
         $sumPrice = (float) $sumPrice + $sum;
-        $_SESSION["sum_price"] = $sumPrice;      
+        $_SESSION["sum_price"] = $sumPrice;  
+        $sumTotal=$sumTotal+$Total;
 ?>
         <tr>
             <td><?=$m?></td>
@@ -81,6 +85,8 @@ for ($i=0; $i <= (int)$_SESSION["intLine"]; $i++){
  $m=$m+1;
 }
 }
+}
+
 mysqli_close($conn);
 ?>
 <tr>
@@ -89,6 +95,7 @@ mysqli_close($conn);
     <td>บาท</td>
 </tr>
 </table>
+<p class="text-end">จำนวนสินค้าที่สั่งซื้อ <?= $sumTotal?> ชิ้น </p>
 <div style="text-align:right">
 <a href ="show_product.php"><button type="button" class="btn btn-outline-danger">เลือกสินค้า</button> </a>
 <button type="submit" class="btn btn-outline-success">ยืนยันการสั่งซื้อ</button>
