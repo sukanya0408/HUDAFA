@@ -22,11 +22,8 @@
 </head>
 
 <body>
-
     <div class="login">
-
         <h1 class="text-center">Login</h1>
-
         <form class="needs-validation" action="login_amcheck.php" method="POST">
             <div class="form-group was-validated">
                 <label class="form-label text-success" for="username">Username</label>
@@ -48,9 +45,13 @@
                 <input class="btn btn-success w-100" type="submit" name="login" value="เข้าสู่ระบบ">
             </div>
         </form>
-
     </div>
-
 </body>
-
 </html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>

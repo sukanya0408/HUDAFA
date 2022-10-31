@@ -16,13 +16,6 @@ $total_price = $rs['total_price'];
     <title>รายการสั่งซื้อ</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js"></script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
-        * {
-            font-family: 'Kanit', sans-serif;
-        }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -35,7 +28,11 @@ $total_price = $rs['total_price'];
 เลขที่การสั่งซื้อ : <?=$rs['orderID']?> <br>
 ชื่อ - นามสกุล (ลูกค้า): <?=$rs['cus_name']?> <br>
 ที่อยู่จัดส่ง : <?=$rs['address']?> <br>
-เบอร์โทรศัพท์ : <?=$rs['telephone']?> <br>
+เบอร์โทรศัพท์ : <?=$rs['telephone']?> <br><br>
+หลักฐานชำระเงิน : <br>
+<!-- <?php echo '<miage src = "slip/'.$rs['slip'].'" width="100px;" height="100px;" alt="Image">'?> -->
+<img src="./slip/<?=$rs['slip']?>" width="200px" height="250"  class="border"> <br>
+
 <br>
 <div class="card mb-4 mt-4"> 
   <div class="card-body"> 
@@ -49,24 +46,21 @@ $total_price = $rs['total_price'];
       <th>ราคารวม</th>
     </tr>
   </thead>
-  
+  <tbody>
 <?php 
 $sql1 ="select * from order_detail d,product p where d.pro_id=p.pro_id and orderID= '" .$_SESSION["order_id"]. "'";
 $result1 = mysqli_query($conn,$sql1);
-while($row=mysqli_fetch_array($resul t1)){
-
-
-
+while($row=mysqli_fetch_array($result1)){
 ?>
-
-    <tr>
+<tr>
       <td><?=$row['pro_id']?></td>
       <td><?=$row['pro_name']?></td>
       <td><?=$row['orderPrice']?></td>
       <td><?=$row['orderQty']?></td>
       <td><?=$row['Total']?></td>
+      
     </tr>
-  
+  </tbody>
 <?php
 }
 ?>
@@ -77,8 +71,9 @@ while($row=mysqli_fetch_array($resul t1)){
   </div>  
 <br></br>
 <div class="text-center">
-<a href="show_product.php" class="btn btn-success">Back</a>  
-<button onclick="window.print()" class="btn btn-warning">Print</button>  
+<a href="show_product.php" class="btn btn-success">หน้าเเรก</a>
+<a href="payment_add.php" class="btn btn-danger">ชำระเงิน</a>   
+<button onclick="window.print()" class="btn btn-warning">ใบเสร็จ</button>  
   
 </div>
   </div>

@@ -58,7 +58,7 @@ include 'condb.php';
                             <div class="card-header">
     <div class="container">
         <br>
-        <h4 class="text-center"><b>แสดงข้อมูลสินค้าคงเหลือ</b></h4>
+        <h4><b>แสดงข้อมูลสินค้าคงเหลือ</b></h4>
         <br>
         <table class="table">
     <tr>

@@ -15,22 +15,22 @@ $p_typeID=$rs['type_id'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>แก้ไขข้อมูลสินค้า</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
         * {
             font-family: 'Kanit', sans-serif;
         }
     </style>
+     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 <body>
-<?php include 'menu1.php'?>
+<?php include 'menu1.php'   ?>
 <div id="layoutSidenav_content">
 <main>
-                    <div class="container-fluid px-4">
-                        <div class="card mb-4 mt-4">
-                            <div class="card-header">
+<div class="container-fluid px-4">
+<div class="card mb-4 mt-4">
+<div class="card-header">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
@@ -64,7 +64,7 @@ $p_typeID=$rs['type_id'];
                 <label> จำนวน </label>
                 <input type="number" name="num" class="form-control" value="<?php echo $rs['amount']?>" > <br>
                 <label> รูปภาพ </label><br><br>
-                 <img src="../admin/image/<?php echo $rs['image']?>"  width="200px" height="150px" ><br><br>
+                 <img src="image/<?php echo $rs['image']?>"  width="150px" height="100px"><br><br>
                 <input type="file" name="file1" > <br> <br>
                 <input type="hidden" name="txtimg" class="form-control" value="<?php echo $rs['image']?>" >
                  
@@ -72,8 +72,8 @@ $p_typeID=$rs['type_id'];
                 <a class="btn btn-danger" href="sh_product.php" role="button">ยกเลิก</a>
                 </form>
             </div>
+            <script src="../js/bootstrap.bundle.min.js"></script>
         </div>
     </div>
-    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

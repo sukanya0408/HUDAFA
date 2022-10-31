@@ -19,7 +19,7 @@
                 <div class="text-center text-dark">
                     <h1 class="display-4 fw-bolder">Juti Bakery</h1>
                     <p class="lead fw-normal text-white-50 mb-0"></p>
-                    <img class="img-fluid" src="img/donut.jpg" alt="..." />
+                    <img class="img-fluid" src="image/donut.jpg" alt="..." />
                 </div>
             </div>
         </header>

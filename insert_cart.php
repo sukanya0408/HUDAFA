@@ -5,8 +5,16 @@ include 'condb.php';
     $cusAddress=$_POST['cus_add'];
     $cusTel=$_POST['cus_tel'];
 
-    $sql="insert into tb_order(cus_name,address,telephone,total_price,order_status) 
-    values('$cusName','$cusAddress','$cusTel','" . $_SESSION["sum_price"] . "','1')";
+    // อัปโหลดสลิป
+    if(is_uploaded_file($_FILES['slip']['tmp_name'])){
+        $new_image_name = 'slip_'.uniqid().".".pathinfo(basename($_FILES['slip']['name']), PATHINFO_EXTENSION);
+        $image_upload_path = "./slip/".$new_image_name;
+        move_uploaded_file($_FILES['slip']['tmp_name'],$image_upload_path);
+    }else{
+        $new_image_name = "";
+    }
+    $sql="insert into tb_order(cus_name,address,telephone,total_price,order_status,slip) 
+    values('$cusName','$cusAddress','$cusTel','" . $_SESSION["sum_price"] . "','1','$new_image_name')";
     mysqli_query($conn,$sql);  
 
     $orderID = mysqli_insert_id($conn);

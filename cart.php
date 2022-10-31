@@ -23,14 +23,55 @@ include 'condb.php';
         }
     </style>
 </head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="show_product.php">Juti Bakery</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="show_product.php">หน้าเเรก</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">*</a></li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ประเภท</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="show_product.php">สินค้าทั้งหมด</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            ตะกร้า
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        </button>
+                    </form>
+                    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="edit_profile.php">แก้ไขโปรไฟล์</a></li>
+                        <!-- <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li> -->
+                        <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+                </div>
+            </div>
+        </nav>
 <body>
+<main>
+                    <div class="container-fluid px-4">
+                        <div class="card mb-4 mt-4">
+                            <div class="card-header bg-light">
     <div class="container">
         <form id="form1" method="POST" action="insert_cart.php">
     <div class = "row">
-        <div class ="col-md-10">
-<div class="alert alert-warning h4" role="alert">
-    สั่งซื้อสินค้า
-</div>
+        <div class ="col-md-10"><br>
+        <h5><b>สั่งซื้อสินค้า </b></h5>
         <table class = "table table-hover">
         <tr>
             <th>ลำดับ</th>
@@ -65,7 +106,7 @@ for ($i=0; $i <= (int)$_SESSION["intLine"]; $i++){
         <tr>
             <td><?=$m?></td>
             <td>
-                <img src="img/<?=$row_pro['image']?>" width="100" height="80" class="border">
+                <img src="image/<?=$row_pro['image']?>" width="150" height="100" class="border">
                 <?=$row_pro['pro_name']?>
             </td>
             <td><?=$row_pro['price']?></td>
@@ -113,6 +154,7 @@ mysqli_close($conn);
            <textarea class="form-control" required placeholder="ที่อยู่" name="cus_add" row="3"></textarea> <br>
             เบอร์โทรศัพท์
             <input type="number" name="cus_tel" class="form-control" required placeholder="เบอร์โทรศัพท์"> <br>
+            <input type="file" name="slip" class="form-control" required placeholder="อัปโหลดหลักฐานชำระเงิน"> <br>
             <br><br><br>
         </div>
     </div>
