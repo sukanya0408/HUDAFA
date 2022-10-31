@@ -34,10 +34,9 @@ $p_typeID=$rs['type_id'];
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-            <div class="alert alert-primary  h4 text-center mb-4" role="alert">
-                แก้ไขข้อมูลสินค้า
+            <div class="h2 mb-4 mt-4">
+    <b> แก้ไขข้อมูลสินค้า </b>
             </div>
-
                 <form name="form1" method="post" action="update_product.php" enctype="multipart/form-data">
                 <label> รหัสสินค้า</label>
                 <input type="text" name="proid" class="form-control" readonly value="<?php echo $rs['pro_id']?>" >

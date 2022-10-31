@@ -9,7 +9,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(img/rt.jpg);
+    background: url(image/rt.jpg);
 }
 
 .login {

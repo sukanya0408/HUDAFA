@@ -25,7 +25,7 @@ $rs=mysqli_fetch_array($result);
     </style>
     
 <body>
-<?php include 'menu1.php'   ?>
+<?php  ?>
 <div id="layoutSidenav_content">
 <main>
                     <div class="container-fluid px-4">
@@ -34,11 +34,11 @@ $rs=mysqli_fetch_array($result);
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-            <div class="h2 mb-4 mt-4">
-    <b> ข้อมูลลูกค้า </b>
+            <div class="alert alert-primary  h4 text-center mb-4" role="alert">
+            แก้ไขข้อมูลลูกค้า
             </div>
 
-                <form name="form1" method="post" action="update_cus.php" enctype="multipart/form-data">
+                <form name="form1" method="post" action="#" enctype="multipart/form-data">
                 <label> รหัสลูกค้า</label>
                 <input type="text" name="cusid" class="form-control" readonly value="<?php echo $rs['customer_id']?>" ><br>
                 <label> ชื่อ</label>
@@ -56,7 +56,7 @@ $rs=mysqli_fetch_array($result);
                 <label> ที่อยู่ </label>
                 <input type="text" name="address" class="form-control" value="<?php echo $rs['ctm_address']?>" > <br>
                 <button type="submit" class="btn btn-success">แก้ไข</button>
-                <a class="btn btn-danger" href="sh_cus.php" role="button">ยกเลิก</a>
+                <a class="btn btn-danger" href="show_product.php" role="button">ยกเลิก</a>
                 </form>
             </div>
         </div>
