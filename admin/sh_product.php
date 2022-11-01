@@ -27,8 +27,8 @@ include 'condb.php';
                         <div class="card mb-4 mt-4">
                             <div class="card-header">
     <div class="container">
-    <div class="h2 mb-4 mt-4">
-    <b> ข้อมูลลูกค้า </b>
+    <div class="alert alert-primary  h2 text-center mb-4 mt-4" role="alert">
+                แสดงข้อมูลสินค้า
             </div>
             <a class="btn btn-primary mb-4" href="fr_product.php" role="button">เพิ่มสินค้า+</a> <br>
     <table class="table table-striped table-hover">
@@ -54,7 +54,7 @@ while($row=mysqli_fetch_array($hand)){
             <td><?=$row['type_name']?></td>
             <td><?=$row['price']?></td>
             <td><?=$row['amount']?></td>
-            <td><image src="image/<?=$row['image']?>" width="150px" height="100px"></td>
+            <td><image src="image/<?=$row['image']?>" width="100px" height="150px"></td>
             <td><a href="edit_product.php?id=<?=$row['pro_id']?>" class="btn btn-success"> แก้ไข</a></td>
             <td><a href="delete_product.php?id=<?=$row['pro_id']?>" class="btn btn-danger">ลบ</a></td>
            </tr>

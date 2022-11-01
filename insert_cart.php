@@ -1,6 +1,7 @@
 <?php 
 session_start();
 include 'condb.php';
+    $cusId = $_SESSION['userid'];
     $cusName=$_POST['cus_name'];
     $cusAddress=$_POST['cus_add'];
     $cusTel=$_POST['cus_tel'];
@@ -13,8 +14,8 @@ include 'condb.php';
     }else{
         $new_image_name = "";
     }
-    $sql="insert into tb_order(cus_name,address,telephone,total_price,order_status,slip) 
-    values('$cusName','$cusAddress','$cusTel','" . $_SESSION["sum_price"] . "','1','$new_image_name')";
+    $sql="insert into tb_order(cus_id,cus_name,address,telephone,total_price,order_status,slip) 
+    values('$cusId','$cusName','$cusAddress','$cusTel','" . $_SESSION["sum_price"] . "','1','$new_image_name')";
     mysqli_query($conn,$sql);  
 
     $orderID = mysqli_insert_id($conn);
@@ -42,7 +43,9 @@ include 'condb.php';
         }  
 
         }
-    }
+
+}
+
     mysqli_close($conn);
     unset($_SESSION["intLine"]);
     unset($_SESSION["strProductID"]);

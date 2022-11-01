@@ -1,6 +1,12 @@
 <?php include 'condb.php'; 
 $ids=$_GET['id'];
 
+$sql = "SELECT * FROM `tb_order` WHERE `orderID` = $ids";
+$result=mysqli_query($conn,$sql);
+$row=mysqli_fetch_array($result);
+
+// $row=mysqli_fetch_array($result)
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +21,12 @@ $ids=$_GET['id'];
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+        * {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
     </head>
     <body class="sb-nav-fixed">
         <?php include 'menu1.php';   ?>
@@ -29,16 +40,15 @@ $ids=$_GET['id'];
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 แสดงรายการสินค้า
-
                                 <div> 
                                     <br>
                                 <a href="report_order.php"> <button type="button" class="btn btn-outline-primary">กลับหน้าหลัก</button> </a> 
                             </div>
                             <br>
-
-
                             <div class="card-body">
-                                <h5>เลขที่ใบสั่งซื้อ : <?=$ids?></h5>
+                                <h5>เลขที่ใบสั่งซื้อ : <?=$ids?></h5> 
+                                หลักฐานชำระเงิน : <br>
+                            <img src="../slip/<?=$row['slip']?>" width="200px" height="250"  class="border"> <br>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -58,6 +68,7 @@ $ids=$_GET['id'];
           $sum_total=0;
           while($row=mysqli_fetch_array($result)){
             $sum_total=$row['total_price'];
+            
           ?> 
                                     
                                         <tr>
@@ -74,10 +85,13 @@ $ids=$_GET['id'];
                                     ?>
 
                                 </table>
+                                
                                 <b>ราคารวมสุทธิ <?=number_format($sum_total,2)?> บาท</b>
+                                
                             </div>
                         </div>
                     </div>
+                    <a href="pay_order.php?id=<?=$row['orderID']?>" class="btn btn-info" onclick="del1(this.href); return false;">ปรับสถานะ</a>
                 </main>
                 <?php include 'footer.php';   ?>
                 
@@ -86,7 +100,14 @@ $ids=$_GET['id'];
         </div>
     </body>
 </html>
-
+<script>
+    function del1(mypage){
+    var agree=confirm('คุณต้องการปรับสถานะการชำระเงินหรือไม่');
+    if(gree){
+        window.location=mypage;
+    }
+}
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>

@@ -34,9 +34,10 @@ $p_typeID=$rs['type_id'];
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-            <div class="h2 mb-4 mt-4">
-    <b> แก้ไขข้อมูลสินค้า </b>
+            <div class="alert alert-primary  h4 text-center mb-4" role="alert">
+                แก้ไขข้อมูลสินค้า
             </div>
+
                 <form name="form1" method="post" action="update_product.php" enctype="multipart/form-data">
                 <label> รหัสสินค้า</label>
                 <input type="text" name="proid" class="form-control" readonly value="<?php echo $rs['pro_id']?>" >
@@ -59,11 +60,15 @@ $p_typeID=$rs['type_id'];
                     ?>
                 </select>
                 <label> ราคา </label>
-                <input type="number" name="price" class="form-control"  value="<?php echo $rs['price']?>" > <br>
+                <input type="number" name="price" class="form-control"  value="<?php echo $rs['price']?>" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">สินค้าขายดี</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="product_best" name="product_best" <?php if($rs['product_best'] == '1'){ echo "checked"; }?> >
+                </div>
                 <label> จำนวน </label>
                 <input type="number" name="num" class="form-control" value="<?php echo $rs['amount']?>" > <br>
                 <label> รูปภาพ </label><br><br>
-                 <img src="image/<?php echo $rs['image']?>"  width="150px" height="100px"><br><br>
+                 <img src="image/<?php echo $rs['image']?>"  width="100px" height="150px" ><br><br>
                 <input type="file" name="file1" > <br> <br>
                 <input type="hidden" name="txtimg" class="form-control" value="<?php echo $rs['image']?>" >
                  

@@ -23,7 +23,6 @@ $rs=mysqli_fetch_array($result);
             font-family: 'Kanit', sans-serif;
         }
     </style>
-    
 <body>
 <?php include 'menu1.php'   ?>
 <div id="layoutSidenav_content">

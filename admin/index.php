@@ -1,9 +1,12 @@
+<?php 
+    include 'condb.php';
+    session_start();
+    if(!isset($_SESSION['userid'])){
+        header("location:logout.php");
+    }
+?>
 <?php
-session_start();
-include 'condb.php';
-// if(!isset($_SESSION["admin_id"])){
-//     $show=header("location:login.php")
-// }
+
 
 $sql1="select COUNT(orderID) AS order_no from tb_order where order_status='1' ";
 $hand=mysqli_query($conn,$sql1);
@@ -94,26 +97,6 @@ $row4=mysqli_fetch_array($hand4);
                         </div>
                     </div>
                 </div>
-                <!-- <div class="row">
-                    <div class="col-xl-6">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-chart-area me-1"></i>
-                                Area Chart Example
-                            </div>
-                            <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-xl-6">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-chart-bar me-1"></i>
-                                Bar Chart Example
-                            </div>
-                            <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="card mb-4">
                     <div class="card-header">
                         <i class="fas fa-table me-1"></i>

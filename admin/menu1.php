@@ -8,15 +8,6 @@
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="logout_am.php">Logout</a></li>
-                    </ul>
-                </li>
             </ul>
         </nav>
         <div id="layoutSidenav">
@@ -46,7 +37,7 @@
                                 ประเภทสินค้า
                             </a>
                             <a class="nav-link" href="sh_product.php">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-bread-slice"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-cookie-bite"></i></i></div>
                                 ข้อมูลสินค้า
                             </a>
                             <a class="nav-link" href="sh_cus.php">
@@ -57,23 +48,18 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-truck-fast"></i></div>
                                 การจัดส่งสินค้า
                             </a>
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="report_product_best.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></i></div>
                                 เบเกอรี่ขายดี
                             </a>
                             <a class="nav-link" href="show_product2.php">
-                                <div class="sb-nav-link-icon"><i class="fa-duotone fa-house"></i></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-cookie-bite"></i></i></div>
                                 สินค้าคงเหลือ
                             </a>
-                            <!-- <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
+                            <a class="nav-link" href="logout.php.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
+                                Logout
                             </a>
-                            <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
-                            </a> -->
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

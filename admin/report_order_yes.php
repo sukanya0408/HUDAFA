@@ -52,6 +52,7 @@
                                             <th>ราคารวมสุทธิ</th>
                                             <th>วันที่สั่งซื้อ</th>
                                             <th>สถานะการสั่งซื้อ</th>
+                                            <th>จัดการ</th>
                                         </tr>
                                     </thead>
 
@@ -89,7 +90,11 @@
                                                 ?>
 
                                             </td>
-                                            
+                                            <td>
+                                                <div>
+                                                <a href="pay_order.php?id=<?=$row['orderID']?>" class="btn btn-warning" onclick="del1(this.href); return false;">ปรับสถานะ</a>
+                                                </div>
+                                            </td>
                                         </tr>
                                         </tr>
                                     <?php 

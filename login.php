@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    if(isset($_SESSION['userid'])){
+        header("location:show_product.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
