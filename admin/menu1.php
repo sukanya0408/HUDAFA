@@ -2,7 +2,7 @@
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.php">Juti Bakery</a>
             <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="index.php"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             </form>
@@ -29,7 +29,7 @@
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="pro-stock.php">สินค้าคงเหลือน้อยกว่า10</a>
-                                    <a class="nav-link" href="report_order.php">การสั่งซื้อสินค้า</a>
+                                    <a class="nav-link" href="report_order.php">รายการสั่งซื้อสินค้า</a>
                                 </nav>
                             </div>
                             <a class="nav-link" href="sh_type.php">
@@ -56,7 +56,7 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-cookie-bite"></i></i></div>
                                 สินค้าคงเหลือ
                             </a>
-                            <a class="nav-link" href="logout.php.php">
+                            <a class="nav-link" href="logout.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
                                 Logout
                             </a>
