@@ -39,6 +39,7 @@
                                 <a href="report_order_yes.php"> <button type="button" class="btn btn-outline-primary">ชำระเงินแล้ว</button> </a> 
                                 <a href="report_order.php"> <button type="button" class="btn btn-outline-primary">ยังไม่ชำระเงิน</button> </a>
                                 <a href="report_order_no.php"> <button type="button" class="btn btn-outline-primary">ยกเลิกใบสั่งซื้อ</button> </a>
+                                <a href="trans_yes.php"> <button type="button" class="btn btn-outline-primary">จัดส่งแล้ว</button> </a>
                                 </div>
                             </div>
                             <div class="card-body">
@@ -86,13 +87,15 @@
                                                 echo "<b style='color:green' >ชำระเงินแล้ว </b>";
                                             }else if($status == 0){
                                                 echo "<b style='color:red' >ยกเลิกใบสั่งซื้อ </b>";
+                                            }else if($status == 3){
+                                                echo "<b style='color:blue' >จัดส่งแล้ว </b>";
                                             }
                                                 ?>
 
                                             </td>
                                             <td>
                                                 <div>
-                                                <a href="pay_order.php?id=<?=$row['orderID']?>" class="btn btn-warning" onclick="del1(this.href); return false;">ปรับสถานะ</a>
+                                                <a href="yes_order.php?id=<?=$row['orderID']?>" class="btn btn-warning" onclick="del1(this.href); return false;">ปรับสถานะ</a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -113,7 +116,6 @@
         </div>
     </body>
 </html>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
@@ -121,3 +123,11 @@
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
+<script>
+function del1(mypage){
+    var agree=confirm('คุณต้องการปรับสถานะการส่งหรือไม่');
+    if(gree){
+        window.location=mypage;
+    }
+}
+</script>

@@ -29,12 +29,12 @@
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 แสดงข้อมูลการสั่งซื้อ (ยังไม่ได้ชำระเงิน)
-
                                 <div> 
                                     <br>
                                 <a href="report_order_yes.php"> <button type="button" class="btn btn-outline-primary">ชำระเงินแล้ว</button> </a> 
                                 <a href="report_order.php"> <button type="button" class="btn btn-outline-primary">ยังไม่ชำระเงิน</button> </a>
                                 <a href="report_order_no.php"> <button type="button" class="btn btn-outline-primary">ยกเลิกใบสั่งซื้อ</button> </a>
+                                <a href="trans_yes.php"> <button type="button" class="btn btn-outline-primary">จัดส่งแล้ว</button> </a>
                                 </div>
                             </div>
                             <br>
@@ -114,6 +114,8 @@
                                                 echo "<b style='color:green' >ชำระเงินแล้ว </b>";
                                             }else if($status == 0){
                                                 echo "<b style='color:red' >ยกเลิกใบสั่งซื้อ </b>";
+                                            }else if($status == 3){
+                                                echo "<b> style='color:blue >จัดส่งแล้ว'</b>";
                                             }
                                                 ?>
 

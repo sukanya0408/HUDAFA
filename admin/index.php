@@ -1,13 +1,6 @@
-<?php 
-    include 'condb.php';
-    session_start();
-    if(!isset($_SESSION['userid'])){
-        header("location:logout.php");
-    }
-?>
 <?php
-
-
+session_start();
+include "condb.php";
 $sql1="select COUNT(orderID) AS order_no from tb_order where order_status='1' ";
 $hand=mysqli_query($conn,$sql1);
 $row1=mysqli_fetch_array($hand);

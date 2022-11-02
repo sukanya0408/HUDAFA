@@ -1,22 +1,12 @@
-<?php 
-    session_start();
-    if(isset($_SESSION['admin_id'])){
-        header("location:index.php");
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <title>เข้าสู่ระบบ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Bootstrap v5.1.3 CDNs -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/sheet.js"></script>
-
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
     <style>
@@ -26,7 +16,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="login">
         <h1 class="text-center">Login</h1>

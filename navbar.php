@@ -8,6 +8,7 @@
                         <li class="nav-item"><a class="nav-link" href="#!">*</a></li>
                         <li class="nav-item"><a class="nav-link" href="history_order.php">ประวัติการสั่งซื้อ</a></li>
                         <li class="nav-item"><a class="nav-link" href="cart.php">ตะกร้าสินค้า</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">สถานะการส่ง</a></li>
                     </ul>
                     <form class="d-flex">
                        

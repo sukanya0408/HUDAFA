@@ -44,7 +44,7 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
                                 ข้อมูลลูกค้า
                             </a>
-                            <a class="nav-link" href="trans.php">
+                            <a class="nav-link" href="trans_yes.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-truck-fast"></i></div>
                                 การจัดส่งสินค้า
                             </a>
@@ -56,7 +56,7 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-cookie-bite"></i></i></div>
                                 สินค้าคงเหลือ
                             </a>
-                            <a class="nav-link" href="logout.php">
+                            <a class="nav-link" href="logout_am.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
                                 Logout
                             </a>

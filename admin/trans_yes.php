@@ -36,6 +36,8 @@
                                     <br>
                                 <a href="report_order_yes.php"> <button type="button" class="btn btn-outline-primary">ชำระเงินแล้ว</button> </a> 
                                 <a href="report_order.php"> <button type="button" class="btn btn-outline-primary">ยังไม่ชำระเงิน</button> </a>
+                                <a href="report_order_no.php"> <button type="button" class="btn btn-outline-primary">ยกเลิกใบสั่งซื้อ</button> </a>
+                                <a href="trans_yes.php"> <button type="button" class="btn btn-outline-primary">จัดส่งแล้ว</button> </a>
                                 </div>
                             </div>
                             <div class="card-body">
@@ -61,7 +63,7 @@
                                         </tr>                                       
                                     </tfoot>
           <?php 
-          $sql = "select * from tb_order where order_status='2' order by reg_date DESC";
+          $sql = "select * from tb_order where order_status='3' order by reg_date DESC";
           $result=mysqli_query($conn,$sql);
           while($row=mysqli_fetch_array($result)){
           $status = $row['order_status'];
@@ -82,6 +84,8 @@
                                                 echo "<b style='color:green' >ชำระเงินแล้ว </b>";
                                             }else if($status == 0){
                                                 echo "<b style='color:red' >ยกเลิกใบสั่งซื้อ </b>";
+                                            }else if($status == 3){
+                                                echo "<b style='color:blue' >จัดส่งแล้ว</b>";
                                             }
                                                 ?>
 
