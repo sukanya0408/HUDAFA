@@ -111,7 +111,7 @@ mysqli_close($conn);
             ที่อยู่จัดส่งสินค้า
            <textarea class="form-control" required placeholder="ที่อยู่" name="cus_add" row="3"></textarea> <br>
             เบอร์โทรศัพท์
-            <input type="number" name="cus_tel" class="form-control" required placeholder="เบอร์โทรศัพท์"> <br>
+            <input type="number" name="cus_tel" maxlength="10" class="form-control" required placeholder="เบอร์โทรศัพท์"> <br>
             อัปโหลดหลักฐานชำระเงิน
             <input type="file" name="slip" class="form-control" required placeholder="อัปโหลดหลักฐานชำระเงิน"> <br>
             <br><br><br>

@@ -91,7 +91,6 @@ $row=mysqli_fetch_array($result);
                             </div>
                         </div>
                     </div>
-                    <a href="pay_order.php?id=<?=$row['orderID']?>" class="btn btn-info" onclick="del1(this.href); return false;">ปรับสถานะ</a>
                 </main>
                 <?php include 'footer.php';   ?>
                 

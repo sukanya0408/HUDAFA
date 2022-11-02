@@ -51,7 +51,7 @@ $rs=mysqli_fetch_array($result);
                 <label> อีเมล </label>
                 <input type="text" name="email" class="form-control" value="<?php echo $rs['ctm_email']?>" > <br>
                 <label> เบอร์โทรศัพท์ </label>
-                <input type="text" name="phone" class="form-control" value="<?php echo $rs['ctm_phone']?>" > <br>
+                <input type="text" name="phone" maxlength="10" class="form-control" value="<?php echo $rs['ctm_phone']?>" > <br>
                 <label> ที่อยู่ </label>
                 <input type="text" name="address" class="form-control" value="<?php echo $rs['ctm_address']?>" > <br>
                 <button type="submit" class="btn btn-success">แก้ไข</button>

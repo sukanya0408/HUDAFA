@@ -35,15 +35,13 @@ include 'condb.php';
 
     <div id="layoutSidenav_content">
         <main>
-            <div class="container-fluid px-4">
-                <h1 class="mt-4">Dashboard</h1>
+            <div class="container-fluid px-4"><br><br>
+            <h4 class="alert alert-danger"> รายการสินค้าที่เหลือน้อยกว่า 10 ชิ้น</h4>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item active"></li>
                 </ol>
-                
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h4 class="alert alert-danger"> รายการสินค้าที่เหลือน้อยกว่า 10 ชิ้น</h4>
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple">

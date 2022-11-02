@@ -50,13 +50,13 @@ include 'navbar.php';
                 <label> นามสกุล </label>
                 <input type="text" name="sname" class="form-control"  value="<?php echo $rs['ctm_sname']?>" > <br>
                 <label> ชื่อผู้ใช้ </label>
-                <input type="text" name="username" class="form-control" value="<?php echo $rs['ctm_user']?>" > <br>
+                <input type="text" name="username" class="form-control" readonly value="<?php echo $rs['ctm_user']?>" > <br>
                 <label> รหัสผ่าน </label>
                 <input type="password" name="password" class="form-control" value="<?php echo $rs['ctm_password']?>" > <br>
                 <label> อีเมล </label>
                 <input type="text" name="email" class="form-control" value="<?php echo $rs['ctm_email']?>" > <br>
                 <label> เบอร์โทรศัพท์ </label>
-                <input type="text" name="phone" class="form-control" value="<?php echo $rs['ctm_phone']?>" > <br>
+                <input type="text" name="phone" class="form-control" maxlength = "10" value="<?php echo $rs['ctm_phone']?>" > <br>
                 <label> ที่อยู่ </label>
                 <input type="text" name="address" class="form-control" value="<?php echo $rs['ctm_address']?>" > <br>
                 <button type="submit" class="btn btn-warning">แก้ไข</button>

@@ -45,7 +45,7 @@ include 'condb.php';
                 <label> อีเมล</label>
                 <input type="text" name="email" class="form-control" required>
                 <label> เบอร์โทรศัพท์</label>
-                <input type="text" name="phone" class="form-control" required>
+                <input type="text" name="phone" maxlength = "10" class="form-control" required>
                 <label> ที่อยู่</label>
                 <input type="text" name="address" class="form-control" required><br>
 

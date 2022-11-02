@@ -23,15 +23,20 @@
                             <div class="sb-sidenav-menu-heading"></div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                รายงานการขาย
+                                รายงาน
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="pro-stock.php">สินค้าคงเหลือน้อยกว่า10</a>
-                                    <a class="nav-link" href="report_order.php">รายการสั่งซื้อสินค้า</a>
+                                    <a class="nav-link" href="report_product_best.php">เบเกอรี่ขายดี</a>
+                                    <a class="nav-link" href="report_sale.php">รายงานสรุปยอดขายตามช่วงเวลา</a>
+                                    <a class="nav-link" href="show_product3.php">รายงานสรุปยอดขาย</a>
                                 </nav>
                             </div>
+                            <a class="nav-link" href="report_order.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                                รายการสั่งซื้อสินค้า
+                            </a>
                             <a class="nav-link" href="sh_type.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-bread-slice"></i></div>
                                 ประเภทสินค้า
@@ -48,9 +53,9 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-truck-fast"></i></div>
                                 การจัดส่งสินค้า
                             </a>
-                            <a class="nav-link" href="report_product_best.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></i></div>
-                                เบเกอรี่ขายดี
+                            <a class="nav-link" href="pro-stock.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-cookie-bite"></i></i></div>
+                                สินค้าคงเหลือน้อยกว่า10
                             </a>
                             <a class="nav-link" href="show_product2.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-cookie-bite"></i></i></div>

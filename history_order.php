@@ -52,10 +52,12 @@ include 'navbar.php';
                                                 <?php 
                                                     if($row['order_status'] == 0){
                                                         echo "<span style='background-color: #ff0000;padding: 5px 10px 5px 10px;text-align: center;color: #fff;'>ยกเลิก</span>";
-                                                    }elseif($row['order_status'] == 1){
+                                                    }else if($row['order_status'] == 1){
                                                         echo "<span style='background-color: #ffc107;padding: 5px 10px 5px 10px;text-align: center;color: #000;'>ยังไม่ชำระเงิน</span>";
-                                                    }else{
+                                                    }else if($row['order_status'] == 2){
                                                         echo "<span style='background-color: #4cff00;padding: 5px 10px 5px 10px;text-align: center;color: #000;'>ชำระเงินแล้ว</span>";
+                                                    }else if($row['order_status'] == 3){
+                                                        echo "<span style='background-color: #3300ff;padding: 5px 10px 5px 10px;text-align: center;color: #000;'>จัดส่งแล้ว</span>";
                                                     }
                                                 ?>
                                             </div>

@@ -8,7 +8,7 @@ $ctm_email = $_POST['ctm_email'];
 $ctm_phone = $_POST['ctm_phone'];
 $ctm_address = $_POST['ctm_address'];
 
-$ctm_password=hash('sha512',$ctm_password);
+// $ctm_password=hash('sha512',$ctm_password);
 
 $sql = "INSERT INTO customer(ctm_name,ctm_sname,ctm_user,ctm_password,ctm_email,ctm_phone,ctm_address) 
 values('$ctm_name','$ctm_sname','$ctm_user','$ctm_password','$ctm_email','$ctm_phone','$ctm_address') ";

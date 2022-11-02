@@ -72,7 +72,7 @@ $row4=mysqli_fetch_array($hand4);
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">
-                        <div class="card bg-success text-white mb-4">
+                        <div class="card bg-danger text-white mb-4">
                             <div class="card-body">รายการสั่งซื้อสินค้า (ยกเลิก)<h4>[<?=$row3['order_cancle']?>]</h4></div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <a class="small text-white stretched-link" href="report_order_no.php">ดูรายละเอียด</a>
@@ -81,7 +81,7 @@ $row4=mysqli_fetch_array($hand4);
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">
-                        <div class="card bg-danger text-white mb-4">
+                        <div class="card bg-success text-white mb-4">
                             <div class="card-body">รายการสินค้าที่เหลือน้อยกว่า 10 ชิ้น<h4>[<?=$row4['pro_num']?>]</h4></div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <a class="small text-white stretched-link" href="pro-stock.php">View Details</a>
