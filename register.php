@@ -52,7 +52,7 @@
             </div>
             <div class="form-group was-validated">
                 <label class="form-label text-success">เบอร์โทร</label>
-                <input class="form-control" type="text" name="ctm_phone" required>
+                <input class="form-control"  maxlength = "10" type="text" name="ctm_phone" required>
                 <div class="invalid-feedback">
                 </div>
                 <div class="form-group was-validated">
