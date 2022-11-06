@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>address</title>
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0px;
+            height: 100%;
+        }
+
+        #map {
+            margin: 25%;
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body onload="init();">
+
+    <div id="map"></div>
+
+    <script type="text/javascript" src="https://api.longdo.com/map/?key=c6a189a4f8b88d7cee509691a363c224"></script>
+    <script>
+        function init() {
+            var map = new longdo.Map({
+                placeholder: document.getElementById('map')
+            });
+        }
+    </script>
+</body>
+
+<!-- </html>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Address</title>
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0px;
+            height: 100%;
+        }
+
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body onload="init();">
+
+    <div id="map"></div>
+
+    <script type="text/javascript" src="https://api.longdo.com/map/?key=c6a189a4f8b88d7cee509691a363c224"></script>
+    <script>
+        function init() {
+            var map = new longdo.Map({
+                placeholder: document.getElementById('map')
+            });
+        }
+    </script>
+</body>
+
+</html> -->
