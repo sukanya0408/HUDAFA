@@ -30,11 +30,42 @@ include 'condb.php';
     }
 
     #map {
-        /* margin: 25%; */
-        width: 40%;
+        width: 85%;
         height: 40%;
     }
     </style>
+    <script src="https://api.longdo.com/map/?key=c6a189a4f8b88d7cee509691a363c224"></script>
+    <script>
+    var map;
+    var marker = new longdo.Marker({
+        lon: 100.643005,
+        lat: 14.525007
+    });
+
+    function init() {
+        map = new longdo.Map({
+            placeholder: document.getElementById('map')
+        });
+        map.location({
+            lon: 100,
+            lat: 16
+        }, true);
+    }
+
+    function dropMarker() {
+        var result = map.location();
+        console.log(result)
+        alert(
+            "lon: " + result.lon +
+            "\nlat: " + result.lat
+        )
+        var _aa = new longdo.Marker({
+            lon: result.lon,
+            lat: result.lat
+        });
+        map.Overlays.drop(_aa);
+    }
+    </script>
 </head>
 <?php 
 include 'navbar.php';
@@ -120,17 +151,11 @@ mysqli_close($conn);
                 </div>
                 <br>
                 <div class="row">
-                    <div id="map"></div>
-                    <script type="text/javascript"
-                        src="https://api.longdo.com/map/?key=c6a189a4f8b88d7cee509691a363c224"></script>
-                    <script>
-                    function init() {
-                        var map = new longdo.Map({
-                            placeholder: document.getElementById('map')
-                        });
-                    }
-                    </script>
-                    <div class="col-md-6 mt-2">
+                    <div id="map" class="mt-2"></div>
+                    <div class="mt-2">
+                        <button onclick="dropMarker()" class="btn btn-outline-info">พิกัดปักหมุด</button>
+                    </div>
+                    <div class="col-md-10 mt-2">
                         <div class="alert alert-warning" h4 role="alert">
                             <b>ข้อมูลสำหรับจัดส่ง </b>
                         </div>
@@ -148,7 +173,7 @@ mysqli_close($conn);
                             placeholder="อัปโหลดหลักฐานชำระเงิน"> <br>
                         <br><br><br>
                     </div>
-                    <div class="col-12">
+                    <div class="col-md-10">
                         <b>
                             <div class="alert alert-warning text-center" h4 role="alert">แสกน Qrcode เพื่อชำระเงิน
                         </b>
@@ -158,7 +183,10 @@ mysqli_close($conn);
                     </div>
                 </div>
         </form>
-        <button type="submit" class="btn btn-outline-success" style="margin-bottom: 20px;">ยืนยันการสั่งซื้อ</button>
+        <div class="text-center">
+            <button type="submit" class="btn btn-outline-success"
+                style="margin-bottom: 20px;">ยืนยันการสั่งซื้อ</button>
+        </div>
     </div>
 </body>
 
