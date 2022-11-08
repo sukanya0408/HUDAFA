@@ -45,7 +45,7 @@ include 'navbar.php';
                                             <img src="admin/image/<?=$row['image']?>" alt="" style="width: 100%;height: 100%;">
                                         </div>
                                         <div class="col-12" style="position: absolute;bottom: 15px;">
-                                            <div class="card" style="background-color: #ffffff2e;">
+                                            <div class="card" style="background-color:#333333;">
                                                 <span style="font-weight: bold;color: #fff;">ชื่อสินค้า : <span><?=$row['pro_name']?></span></span><br>
                                                 <span style="font-weight: bold;color: #fff;">จำนวน : <span><?=$row['orderQty']?></span></span><br>
                                                 <span style="font-weight: bold;color: #fff;">ราคา : <span><?=$row['Total']?></span></span><br>
@@ -57,7 +57,7 @@ include 'navbar.php';
                                                     }else if($row['order_status'] == 2){
                                                         echo "<span style='background-color: #4cff00;padding: 5px 10px 5px 10px;text-align: center;color: #000;'>ชำระเงินแล้ว</span>";
                                                     }else if($row['order_status'] == 3){
-                                                        echo "<span style='background-color: #3300ff;padding: 5px 10px 5px 10px;text-align: center;color: #000;'>จัดส่งแล้ว</span>";
+                                                        echo "<span style='background-color: #FF00FF;padding: 5px 10px 5px 10px;text-align: center;color: #000;'>จัดส่งแล้ว</span>";
                                                     }
                                                 ?>
                                             </div>
