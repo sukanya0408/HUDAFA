@@ -8,6 +8,7 @@ $rs=mysqli_fetch_array($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,48 +19,59 @@ $rs=mysqli_fetch_array($result);
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
-        * {
-            font-family: 'Kanit', sans-serif;
-        }
-    </style>
-<body>
-<?php include 'menu1.php'   ?>
-<div id="layoutSidenav_content">
-<main>
-                    <div class="container-fluid px-4">
-                        <div class="card mb-4 mt-4">
-                            <div class="card-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-            <div class="h2 mb-4 mt-4">
-    <b> ข้อมูลลูกค้า </b>
-            </div>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 
-                <form name="form1" method="post" action="update_cus.php" enctype="multipart/form-data">
-                <label> รหัสลูกค้า</label>
-                <input type="text" name="cusid" class="form-control" readonly value="<?php echo $rs['customer_id']?>" ><br>
-                <label> ชื่อ</label>
-                <input type="text" name="name" class="form-control" value="<?php echo $rs['ctm_name']?>" ><br>
-                <label> นามสกุล </label>
-                <input type="text" name="sname" class="form-control"  value="<?php echo $rs['ctm_sname']?>" > <br>
-                <label> ชื่อผู้ใช้ </label>
-                <input type="text" name="username" class="form-control" value="<?php echo $rs['ctm_user']?>" > <br>
-                <label> รหัสผ่าน </label>
-                <input type="password" name="password" class="form-control" value="<?php echo $rs['ctm_password']?>" > <br>
-                <label> อีเมล </label>
-                <input type="text" name="email" class="form-control" value="<?php echo $rs['ctm_email']?>" > <br>
-                <label> เบอร์โทรศัพท์ </label>
-                <input type="text" name="phone" maxlength="10" class="form-control" value="<?php echo $rs['ctm_phone']?>" > <br>
-                <label> ที่อยู่ </label>
-                <input type="text" name="address" class="form-control" value="<?php echo $rs['ctm_address']?>" > <br>
-                <button type="submit" class="btn btn-success">แก้ไข</button>
-                <a class="btn btn-danger" href="sh_cus.php" role="button">ยกเลิก</a>
-                </form>
-            </div>
-        </div>
-    </div>
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    * {
+        font-family: 'Kanit', sans-serif;
+    }
+    </style>
+
+<body>
+    <?php include 'navbar.php'?>
+        <main>
+            <div class="container-fluid px-4">
+                <div class="card mb-4 mt-4">
+                    <div class="card-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="h2 mb-4 mt-4">
+                                        <b> ข้อมูลลูกค้า </b>
+                                    </div>
+
+                                    <form name="form1" method="post" action="update_cus.php"
+                                        enctype="multipart/form-data">
+                                        <label> รหัสลูกค้า</label>
+                                        <input type="text" name="cusid" class="form-control" readonly
+                                            value="<?php echo $rs['customer_id']?>"><br>
+                                        <label> ชื่อ</label>
+                                        <input type="text" name="name" class="form-control"
+                                            value="<?php echo $rs['ctm_name']?>"><br>
+                                        <label> นามสกุล </label>
+                                        <input type="text" name="sname" class="form-control"
+                                            value="<?php echo $rs['ctm_sname']?>"> <br>
+                                        <label> ชื่อผู้ใช้ </label>
+                                        <input type="text" name="username" class="form-control"
+                                            value="<?php echo $rs['ctm_user']?>"> <br>
+                                        <label> รหัสผ่าน </label>
+                                        <input type="password" name="password" class="form-control"
+                                            value="<?php echo $rs['ctm_password']?>"> <br>
+                                        <label> อีเมล </label>
+                                        <input type="text" name="email" class="form-control"
+                                            value="<?php echo $rs['ctm_email']?>"> <br>
+                                        <label> เบอร์โทรศัพท์ </label>
+                                        <input type="text" name="phone" maxlength="10" class="form-control"
+                                            value="<?php echo $rs['ctm_phone']?>"> <br>
+                                        <label> ที่อยู่ </label>
+                                        <input type="text" name="address" class="form-control"
+                                            value="<?php echo $rs['ctm_address']?>"> <br>
+                                        <button type="submit" class="btn btn-success">แก้ไข</button>
+                                        <a class="btn btn-danger" href="sh_cus.php" role="button">ยกเลิก</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

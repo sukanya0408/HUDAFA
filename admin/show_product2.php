@@ -32,6 +32,7 @@ include 'condb.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,55 +42,53 @@ include 'condb.php';
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
-        * {
-            font-family: 'Kanit', sans-serif;
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+    * {
+        font-family: 'Kanit', sans-serif;
+    }
     </style>
 </head>
-<?php include 'menu1.php';   ?>
+<?php include 'navbar.php';   ?>
 <body>
-    <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
-                        
+        <main>
+            <div class="container-fluid px-4">
 
-                        <div class="card mb-4 mt-4">
-                            <div class="card-header">
-    <div class="container">
-        <br>
-        <h4><b>แสดงข้อมูลสินค้าคงเหลือ</b></h4>
-        <br>
-        <table class="table">
-    <tr>
-        <th>รหัสสินค้า</th>
-        <th>ชื่อสินค้า</th>
-        <th>จำนวน</th>
-        <th class="text-end">ราคา</th>
-    </tr>
-    <?php
+
+                <div class="card mb-4 mt-4">
+                    <div class="card-header">
+                        <div class="container">
+                            <br>
+                            <h4><b>แสดงข้อมูลสินค้าคงเหลือ</b></h4>
+                            <br>
+                            <table class="table">
+                                <tr>
+                                    <!-- <th>รหัสสินค้า</th> -->
+                                    <th>ชื่อสินค้า</th>
+                                    <th>จำนวน</th>
+                                    <!-- <th class="text-end">ราคา</th> -->
+                                </tr>
+                                <?php
     $total=0;
     $sql="select * from product order by pro_id";
     $result = mysqli_query($conn,$sql);
     while($row=mysqli_fetch_array($result)){
     $total=$total + $row['price'];  
     ?>
-    <tr>
-        <td><?=$row['pro_id']?></td>
-        <td><?=$row['pro_name']?></td>
-        <td><?=$row['amount']?></td>
-        <td class="text-end"><?=$row['price']?></td>
-        
-        
-    </tr>
-    <?php
+                                <tr>
+                                    <!-- <td><?=$row['pro_id']?></td> -->
+                                    <td><?=$row['pro_name']?></td>
+                                    <td><?=$row['amount']?></td>
+                                    <!-- <td class="text-end"><?=$row['price']?></td> -->
+                                </tr>
+                                <?php
     }
     mysqli_close($conn);
     ?>
-    </table>
-    <!-- <h4 class="text-end">รวมเป็นเงิน: <?=number_format($total,2)?> </h4> -->
-    <br>
-    <?php
+                            </table>
+                            <!-- <h4 class="text-end">รวมเป็นเงิน: <?=number_format($total,2)?> </h4> -->
+                            <br>
+                            <?php
  // คำสั่งการ Export ไฟล์เป็น PDF
 $html = ob_get_contents();      // เรียกใช้ฟังก์ชัน รับข้อมูลที่จะมาแสดงผล
 $mpdf->WriteHTML($html);        // รับข้อมูลเนื้อหาที่จะแสดงผลผ่านตัวแปร $html
@@ -97,10 +96,11 @@ $mpdf->Output('Report.pdf');  //สร้างไฟล์ PDF ชื่อว�
 ob_end_flush();                 // ปิดการแสดงผลข้อมูลของไฟล์ HTML ณ จุดนี้
 ?>
 
-<!--การสร้างลิงค์ เรียกไฟล์ myReport.pdf แสดงผลไฟล์ PDF  -->
-<a href="Report.pdf"><button class="btn btn-primary">Export PDF</button> </a>
+                            <!--การสร้างลิงค์ เรียกไฟล์ myReport.pdf แสดงผลไฟล์ PDF  -->
+                            <a href="Report.pdf"><button class="btn btn-primary">Export PDF</button> </a>
 
-    </div>        
-    <script src="../js/bootstrap.bundle.min.js"></script>
+                        </div>
+                        <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

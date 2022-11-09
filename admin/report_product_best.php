@@ -14,17 +14,16 @@
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
-        * {
-            font-family: 'Kanit', sans-serif;
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+    * {
+        font-family: 'Kanit', sans-serif;
+    }
     </style>
 </head>
 
 <body class="sb-nav-fixed">
-    <?php include 'menu1.php';   ?>
-
-    <div id="layoutSidenav_content">
+    <?php include 'navbar.php';   ?>
         <main>
             <div class="container-fluid px-4">
                 <div class="card mb-4 mt-4">
@@ -43,12 +42,12 @@
                                     $sql = "SELECT * FROM `product` WHERE `product_best` = '1'";
                                     $result=mysqli_query($conn,$sql);
                                     while($row=mysqli_fetch_array($result)){ ?>
-                                        <tr>
-                                            <td><?=$row['pro_id']?></td>
-                                            <td><?=$row['pro_name']?></td>
-                                            <td><?=$row['amount']?></td>
-                                        </tr>
-                                    <?php }
+                                <tr>
+                                    <td><?=$row['pro_id']?></td>
+                                    <td><?=$row['pro_name']?></td>
+                                    <td><?=$row['amount']?></td>
+                                </tr>
+                                <?php }
                                 ?>
                             </tbody>
                         </table>
@@ -57,15 +56,13 @@
             </div>
         </main>
         <?php include 'footer.php'   ?>
-
-
-    </div>
     </div>
 </body>
 
 </html>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
 <script src="js/scripts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
 <script src="assets/demo/chart-area-demo.js"></script>

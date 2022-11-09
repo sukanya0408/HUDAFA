@@ -40,15 +40,15 @@ include 'navbar.php';
                         <div class="row">
                             <?php while($row=mysqli_fetch_array($result)){ ?>
                                 <div class="col-6 col-lg-3 card">
-                                    <div class="row">
+                                    <div class="row ">
                                         <div class="col-12" style="text-align: center;padding-top: 10px;padding: 0px;">
                                             <img src="admin/image/<?=$row['image']?>" alt="" style="width: 100%;height: 100%;">
                                         </div>
                                         <div class="col-12" style="position: absolute;bottom: 15px;">
-                                            <div class="card" style="background-color:#333333;">
-                                                <span style="font-weight: bold;color: #fff;">ชื่อสินค้า : <span><?=$row['pro_name']?></span></span><br>
-                                                <span style="font-weight: bold;color: #fff;">จำนวน : <span><?=$row['orderQty']?></span></span><br>
-                                                <span style="font-weight: bold;color: #fff;">ราคา : <span><?=$row['Total']?></span></span><br>
+                                            <div class="card" style="background-color:#e8e1e1;">
+                                                <span style="font-weight: bold;color: #333333;">ชื่อสินค้า : <span><?=$row['pro_name']?></span></span><br>
+                                                <span style="font-weight: bold;color: #333333;">จำนวน : <span><?=$row['orderQty']?></span></span><br>
+                                                <span style="font-weight: bold;color: #333333;">ราคา : <span><?=$row['Total']?></span></span><br>
                                                 <?php 
                                                     if($row['order_status'] == 0){
                                                         echo "<span style='background-color: #ff0000;padding: 5px 10px 5px 10px;text-align: center;color: #fff;'>ยกเลิก</span>";

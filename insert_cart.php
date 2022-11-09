@@ -5,6 +5,8 @@ include 'condb.php';
     $cusName=$_POST['cus_name'];
     $cusAddress=$_POST['cus_add'];
     $cusTel=$_POST['cus_tel'];
+    $cus_Lat= $_POST['cus_lat'];
+    $cus_Log= $_POST['cus_log'];
 
     // อัปโหลดสลิป
     if(is_uploaded_file($_FILES['slip']['tmp_name'])){
@@ -14,8 +16,8 @@ include 'condb.php';
     }else{
         $new_image_name = "";
     }
-    $sql="insert into tb_order(cus_id,cus_name,address,telephone,total_price,order_status,slip) 
-    values('$cusId','$cusName','$cusAddress','$cusTel','" . $_SESSION["sum_price"] . "','1','$new_image_name')";
+    $sql="insert into tb_order(cus_id,cus_name,address,lat,lng,telephone,total_price,order_status,slip) 
+    values('$cusId','$cusName','$cusAddress','$cus_Lat','$cus_Log','$cusTel','" . $_SESSION["sum_price"] . "','1','$new_image_name')";
     mysqli_query($conn,$sql);  
 
     $orderID = mysqli_insert_id($conn);

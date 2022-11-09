@@ -1,6 +1,7 @@
 <?php 
 session_start();
 include 'condb.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +36,8 @@ include 'condb.php';
     }
     </style>
     <script src="https://api.longdo.com/map/?key=c6a189a4f8b88d7cee509691a363c224"></script>
+    <script type="text/javascript" src="https://api.longdo.com/map/?key=c6a189a4f8b88d7cee509691a363c224"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script>
     var map;
     var marker = new longdo.Marker({
@@ -47,30 +50,39 @@ include 'condb.php';
             placeholder: document.getElementById('map')
         });
         map.location({
-            lon: 100,
-            lat: 16
+            lon: 100.4769693934632,
+            lat: 7.006206362201753
         }, true);
     }
 
     function dropMarker() {
+        map.Overlays.clear();
         var result = map.location();
-        console.log(result)
-        alert(
-            "lon: " + result.lon +
-            "\nlat: " + result.lat
-        )
+        document.getElementById('_lat').value = result.lat
+        document.getElementById('_log').value = result.lon
         var _aa = new longdo.Marker({
             lon: result.lon,
             lat: result.lat
         });
         map.Overlays.drop(_aa);
+        rerverseGeocoding(result.lat, result.lon)
+    }
+
+    function rerverseGeocoding(_lat, _lon) { 
+        fetch(`https://api.longdo.com/map/services/address?&lon=${_lon}&lat=${_lat}&key=c6a189a4f8b88d7cee509691a363c224`, {
+            method: 'GET',
+            }) 
+            .then((response) => response.json())
+            .then((data) => {
+                document.getElementById('address').innerHTML = `${data.subdistrict} ${data.district} ${data.province} ${data.postcode}`
+                console.log(data);
+            })
     }
     </script>
 </head>
 <?php 
 include 'navbar.php';
 ?>
-
 <body onload="init();">
     <div class="container">
         <form id="form1" method="POST" action="insert_cart.php" enctype="multipart/form-data">
@@ -135,6 +147,10 @@ for ($i=0; $i <= (int)$_SESSION["intLine"]; $i++){
 }
 } 
 mysqli_close($conn);
+if($sumTotal == 0) {
+    echo "<script> alert('กรุณาเลือกสินค้า'); </script>";
+    echo "<script> window.location='show_product.php' </script>";
+}
 ?>
                         <tr>
                             <td class="text-end" colspan="4">รวมเป็นเงิน</td>
@@ -142,7 +158,7 @@ mysqli_close($conn);
                             <td>บาท</td>
                         </tr>
                     </table>
-                    <p class="text-end">จำนวนสินค้าที่สั่งซื้อ <?= $sumTotal?> ชิ้น</p>
+                    <p class="text-end">จำนวนสินค้าที่สั่งซื้อ <?= $sumTotal ?> ชิ้น</p>
                     <div style="text-align:right">
                         <a href="show_product.php"><button type="button"
                                 class="btn btn-outline-danger">เลือกสินค้า</button> </a>
@@ -153,7 +169,7 @@ mysqli_close($conn);
                 <div class="row">
                     <div id="map" class="mt-2"></div>
                     <div class="mt-2">
-                        <button onclick="dropMarker()" class="btn btn-outline-info">พิกัดปักหมุด</button>
+                        <a onclick="dropMarker()" class="btn btn-outline-info">พิกัดปักหมุด</a>
                     </div>
                     <div class="col-md-10 mt-2">
                         <div class="alert alert-warning" h4 role="alert">
@@ -163,7 +179,7 @@ mysqli_close($conn);
                         <input type="text" name="cus_name" class="form-control" required placeholder="ชื่อ-นามสกุล"
                             value="<?=$_SESSION['ctm_name']?> <?=$_SESSION['ctm_sname']?> " readonly> <br>
                         ที่อยู่จัดส่งสินค้า
-                        <textarea class="form-control" required placeholder="ที่อยู่" name="cus_add" row="3"></textarea>
+                        <textarea class="form-control" required placeholder="ที่อยู่" name="cus_add" row="3" id="address"></textarea>
                         <br>
                         เบอร์โทรศัพท์
                         <input type="number" name="cus_tel" maxlength="10" class="form-control" required
@@ -180,6 +196,8 @@ mysqli_close($conn);
                         <div class="card" style="width: 18rem;">
                             <img src="image/slip.png">
                         </div>
+                        <input name="cus_lat" type="hidden" id="_lat">
+                        <input name="cus_log" type="hidden" id="_log">
                     </div>
                 </div>
         </form>
