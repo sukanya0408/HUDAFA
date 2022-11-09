@@ -29,7 +29,7 @@
             <div class="container-fluid px-4">
                 <div class="card mb-4 mt-4">
                     <div class="card-body">
-                        <h4>สินค้าขายดี</h4>
+                        <h2>สินค้าขายดี</h2>
                         <table id="datatablesSimple" class="table table-striped">
                             <thead>
                                 <tr>

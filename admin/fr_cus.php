@@ -30,8 +30,8 @@ include 'condb.php';
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-            <div class="alert alert-primary  h4 text-center mb-4" role="alert">
-                เพิ่มข้อมูลลูกค้า
+            <div class="col-sm-6 h2">
+            <b> เพิ่มข้อมูลลูกค้า </b>
             </div>
                 <form name="form1" method="post" action="insert_cus.php" enctype="multipart/form-data">
                 <label> ชื่อ</label>
