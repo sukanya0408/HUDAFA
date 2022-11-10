@@ -36,7 +36,7 @@ $rs=mysqli_fetch_array($result);
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="h2 mb-4 mt-4">
-                                        <b> ข้อมูลลูกค้า </b>
+                                        <b> แก้ไขข้อมูลลูกค้า </b>
                                     </div>
 
                                     <form name="form1" method="post" action="update_cus.php"

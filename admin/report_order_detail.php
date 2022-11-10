@@ -35,12 +35,10 @@ $row=mysqli_fetch_array($result);
     <?php include 'navbar.php';   ?>
         <main>
             <div class="container-fluid px-4">
-
-
                 <div class="card mb-4 mt-4">
                     <div class="card-header">
                         <i class="fas fa-table me-1"></i>
-                        แสดงรายการสินค้า
+                        รายละเอียดการสั่งซื้อ
                         <div>
                             <br>
                             <a href="report_order.php"> <button type="button"
