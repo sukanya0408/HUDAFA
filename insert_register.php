@@ -14,12 +14,12 @@ $sql = "INSERT INTO customer(ctm_name,ctm_sname,ctm_user,ctm_password,ctm_email,
 values('$ctm_name','$ctm_sname','$ctm_user','$ctm_password','$ctm_email','$ctm_phone','$ctm_address') ";
 $result=mysqli_query($conn,$sql);
 if($result){
-    echo "<script> alert('บันทึกข้อมูลเรียบร้อย'); </script>";
+    echo "<script> alert('สมัครสมาชิกสำเร็จ'); </script>";
     echo "<script> window.location='register.php'; </script>";
 }else{
     echo "Error:" . $sql . "<br>" . mysqli_error($conn);
-    echo "<script> alert('บันทึกข้อมูลไม่สำเร็จ'); </script>";
+    echo "<script> alert('สมัครสมาชิกไม่สำเร็จ'); </script>";
 }
 mysqli_close($conn);
-
 ?>
+
