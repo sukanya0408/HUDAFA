@@ -1,11 +1,9 @@
 <?php 
 session_start();
 include 'condb.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +42,6 @@ include 'condb.php';
         lon: 100.643005,
         lat: 14.525007
     });
-
     function init() {
         map = new longdo.Map({
             placeholder: document.getElementById('map')
@@ -54,7 +51,6 @@ include 'condb.php';
             lat: 7.006206362201753
         }, true);
     }
-
     function dropMarker() {
         map.Overlays.clear();
         var result = map.location();
@@ -67,7 +63,6 @@ include 'condb.php';
         map.Overlays.drop(_aa);
         rerverseGeocoding(result.lat, result.lon)
     }
-
     function rerverseGeocoding(_lat, _lon) { 
         fetch(`https://api.longdo.com/map/services/address?&lon=${_lon}&lat=${_lat}&key=c6a189a4f8b88d7cee509691a363c224`, {
             method: 'GET',
@@ -106,7 +101,6 @@ $Total = 0;
 $sumPrice = 0;
 $m = 1;
 $sumTotal=0;
-
 if(isset($_SESSION["intLine"])) {   //ถ้าว่างให้ทำงานใน {}
 
 for ($i=0; $i <= (int)$_SESSION["intLine"]; $i++){ 
@@ -162,7 +156,6 @@ if($sumTotal == 0) {
                     <div style="text-align:right">
                         <a href="show_product.php"><button type="button"
                                 class="btn btn-outline-danger">เลือกสินค้า</button> </a>
-
                     </div>
                 </div>
                 <br>
@@ -207,5 +200,4 @@ if($sumTotal == 0) {
         </div>
     </div>
 </body>
-
 </html>
