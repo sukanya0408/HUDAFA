@@ -24,7 +24,7 @@ include 'navbar.php'
     <div class = "container">
         <div class = "row">
         <?php
-            $ids=$_GET['id'];
+            $ids = $_GET['id'];
             $sql = "SELECT * FROM product,type WHERE product.type_id= type.type_id and product.pro_id='$ids' ";
             $result = mysqli_query($conn, $sql);
             $row=mysqli_fetch_array($result);
