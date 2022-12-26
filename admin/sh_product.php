@@ -24,53 +24,53 @@ include 'condb.php';
 
 <body>
     <?php include 'navbar.php'   ?>
-        <main>
-            <div class="container-fluid px-4">
-                <div class="card mb-4 mt-4">
-                    <div class="card-header">
-                        <div class="container">
-                            <div class="h2 mb-4 mt-4">
-                                <b> ข้อมูลสินค้า </b>
-                            </div>
-                            <a class="btn btn-primary mb-4" href="fr_product.php" role="button">เพิ่มสินค้า+</a> <br>
-                            <table id="datatablesSimple" class="table table-striped">
-                                <tr>
-                                    <th>รหัสสินค้า</th>
-                                    <th>ชื่อสินค้า</th>
-                                    <th>ประเภท</th>
-                                    <th>ราคา</th>
-                                    <th>จำนวน</th>
-                                    <th>รูปภาพ</th>
-                                    <th>แก้ไข</th>
-                                    <th>ลบ</th>
+    <main>
+        <div class="container-fluid px-4">
+            <div class="card mb-4 mt-4">
+                <div class="card-header">
+                    <div class="container">
+                        <div class="h2 mb-4 mt-4">
+                            <b> ข้อมูลสินค้า </b>
+                        </div>
+                        <a class="btn btn-primary mb-4" href="fr_product.php" role="button">เพิ่มสินค้า+</a> <br>
+                        <table id="datatablesSimple" class="table table-striped">
+                            <tr>
+                                <th>รหัสสินค้า</th>
+                                <th>ชื่อสินค้า</th>
+                                <th>ประเภท</th>
+                                <th>ราคา</th>
+                                <th>จำนวน</th>
+                                <th>รูปภาพ</th>
+                                <th>แก้ไข</th>
+                                <th>ลบ</th>
 
-                                </tr>
-                                <?php
+                            </tr>
+                            <?php
 $sql="SELECT * FROM product ,type WHERE product.type_id = type.type_id ";
 $hand = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_array($hand)){
 ?>
-                                <tr>
-                                    <td><?=$row['pro_id']?></td>
-                                    <td><?=$row['pro_name']?></td>
-                                    <td><?=$row['type_name']?></td>
-                                    <td><?=$row['price']?></td>
-                                    <td><?=$row['amount']?></td>
-                                    <td>
-                                        <image src="image/<?=$row['image']?>" width="150px" height="100px">
-                                    </td>
-                                    <td><a href="edit_product.php?id=<?=$row['pro_id']?>" class="btn btn-success">
-                                            แก้ไข</a></td>
-                                    <td><a href="delete_product.php?id=<?=$row['pro_id']?>"
-                                            class="btn btn-danger">ลบ</a></td>
-                                </tr>
-                                <?php
+                            <tr>
+                                <td><?=$row['pro_id']?></td>
+                                <td><?=$row['pro_name']?></td>
+                                <td><?=$row['type_name']?></td>
+                                <td><?=$row['price']?></td>
+                                <td><?=$row['amount']?></td>
+                                <td>
+                                    <image src="image/<?=$row['image']?>" width="150px" height="100px">
+                                </td>
+                                <td><a href="edit_product.php?id=<?=$row['pro_id']?>" class="btn btn-success">
+                                        แก้ไข</a></td>
+                                <td><a href="delete_product.php?id=<?=$row['pro_id']?>" class="btn btn-danger">ลบ</a>
+                                </td>
+                            </tr>
+                            <?php
            }
            mysqli_close($conn);
            ?>
-                            </table>
-                        </div>
-                        <script src="../js/bootstrap.bundle.min.js"></script>
+                        </table>
+                    </div>
+                    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
